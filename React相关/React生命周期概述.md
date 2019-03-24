@@ -1,4 +1,4 @@
-# React的生命周期
+# React的生命周期概述
 
 ### `componentWillMount`
 
