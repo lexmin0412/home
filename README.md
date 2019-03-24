@@ -12,5 +12,5 @@
 ### 目录
 
 #### React
-- [https://github.com/cathe-zhang/Notes/edit/master/README.md](react的生命周期概述)
+- [https://github.com/cathe-zhang/Notes/blob/master/React%E7%9B%B8%E5%85%B3/React%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%A6%82%E8%BF%B0.md](react的生命周期概述)
 
