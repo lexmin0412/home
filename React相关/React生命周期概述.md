@@ -32,11 +32,7 @@
 
 组件即将卸载时调用。为防止不必要的性能消耗，应该在此方法中清除组件中的定时器或事件监听器。
 
-> > > > > 参考资料：
-> > > > >
-> > > > > [https://segmentfault.com/a/1190000004168886?utm_source=tag-newest](https://segmentfault.com/a/1190000004168886?utm_source=tag-newest)
-
-> > > 
-
+## 参考资料 
+- [https://segmentfault.com/a/1190000004168886?utm_source=tag-newest](https://segmentfault.com/a/1190000004168886?utm_source=tag-newest)
 
 
