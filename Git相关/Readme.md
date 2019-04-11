@@ -9,3 +9,6 @@
 ##### 1.2 全局设置
 - 设置用户名 `git config --global user.name "cathe-zhang"`
 - 设置用户邮箱 `git config --global user.email "zhangle_media@hotmail.com"`
+
+##### 1.3 撤销上一步本地commit
+- ` git reset HEAD~`
