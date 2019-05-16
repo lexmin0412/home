@@ -5,8 +5,7 @@ module.exports = {
   themeConfig: {
     repo: "https://github.com/cathe-zhang/notes",
     nav: [
-      { text: "taro相关", link: "/Taro/Taro踩坑指南.md" },
-      { text: "ES6", link: "/ES6+/1. 解构.md" }
+      // { text: "taro相关", link: "/Taro/Taro踩坑指南.md" },
     ],
     sidebar: [
       {
@@ -19,6 +18,7 @@ module.exports = {
           "/npm发布node包指北",
           "/移动端兼容性问题解决方案",
           "/项目目录",
+          "/markdown相关/"
         ]
       },
       {

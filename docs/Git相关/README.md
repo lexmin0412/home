@@ -12,3 +12,6 @@
 
 ##### 1.3 撤销上一步本地commit
 - ` git reset HEAD~`
+
+##### 1.4 删除远程分支
+- `git push origin :<branch>`
