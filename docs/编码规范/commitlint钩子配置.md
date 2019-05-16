@@ -1,4 +1,4 @@
-# 配置commitlint
+# CommitLint钩子配置
 
 1. 安装 `commitlint` 和 `husky` 依赖
 ```cmd
