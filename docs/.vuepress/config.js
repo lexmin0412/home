@@ -1,7 +1,7 @@
 module.exports = {
   title: "CellerChan Blog",
   description: "All I know is that I know nothing.",
-  base: "/notes/",
+  base: "/blog/",
   themeConfig: {
     repo: "https://github.com/cathe-zhang/notes",
     nav: [
