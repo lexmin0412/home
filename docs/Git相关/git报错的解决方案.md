@@ -1,3 +1,5 @@
+# git 报错解决方案
+
 ### 执行`git pull`时报错：`There is no tracking information for the current branch.`
 
 问题：当前branch没有跟踪信息
