@@ -18,7 +18,8 @@ module.exports = {
           "/npm发布node包指北",
           "/移动端兼容性问题解决方案",
           "/项目目录",
-          "/markdown相关/"
+          "/markdown相关/",
+          "/vuepress部署博客"
         ]
       },
       {
@@ -42,7 +43,8 @@ module.exports = {
         children: [
           "/Git相关/",
           "/Git相关/git报错的解决方案.md",
-          "/Git相关/git提交日志规范.md"
+          "/Git相关/git提交日志规范.md",
+          "/Git相关/github pages配置.md",
         ]
       },
       {
