@@ -25,6 +25,7 @@ mkdir .vuepress
 ```
 
 ### 3. 新建配置文件并添加以下代码
+在 `/docs/.vuepress` 目录下新建 `config.js` 并添加以下代码
 ```js
 module.exports = {
   title: "CellerChan Blog",    // 博客标题
