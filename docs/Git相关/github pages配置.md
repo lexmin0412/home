@@ -1,4 +1,4 @@
-# github pages配置
+# Github Pages配置
 
 ### 1. 开发：新建仓库并克隆到本地开发
 ```bash
@@ -14,7 +14,9 @@ git commit -m 'deploy'
 git push -f git@github.com:cathe-zhang/blog master:gh-pages
 ```
 ### 3. 设置github pages来源分支
+```cmd
 settings --> Github Pages --> source，选择gh-pages分支
+```
 
 ### 4. 访问
 此时就可以通过 `https://cathe-zhang.github.io/blog` 访问到你的项目了
