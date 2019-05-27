@@ -17,3 +17,6 @@
 
 ### css编译器
 - easy less, 提供less语法支持
+
+### 同步设置
+- setting sync，可在不同设备上同步vscode设置，实现无缝、统一的开发体验
