@@ -19,7 +19,8 @@ module.exports = {
           "/移动端兼容性问题解决方案",
           "/项目目录",
           "/markdown相关/",
-          "/vuepress部署博客"
+          "/vuepress部署博客",
+          "/小程序获取经纬度不准确的问题"
         ]
       },
       {
@@ -70,7 +71,10 @@ module.exports = {
       {
         title: "VSCode",
         collapsable: false,
-        children: ["/VSCode/工作区相关"]
+        children: [
+          "/VSCode/工作区相关",
+          "/VSCode/使用setting sync同步vscode设置"
+        ]
       },
       {
         title: "编码规范",
