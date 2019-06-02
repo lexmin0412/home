@@ -1,11 +1,11 @@
 # React高阶组件
 
-### 高阶组件的定义
+### 认识高阶组件
 高阶组件其实就是一个函数，它接受一个组件，返回另外一个组件，生成的新组件可以对属性进行包装，也可以重写组件的部分生命周期。
 
 React作为组件化的开衫鼻祖，在对组件功能进行扩展时，高阶组件是不二法则。react-redux中的connect就是一个高阶组件。它接受一个组件，然后对它的生命周期进行一些特殊的处理，实现了组件间的数据共享。
 
-### 定义高阶组件
+### 实现一个高阶组件
 
 ```jsx
 import React, { Component } from 'react';
@@ -55,13 +55,13 @@ const withData = (Comp) => {
 }
 ```
 
-### React高阶组件应用
+### 高阶组件应用
 ```jsx
 import React, { Component } from 'react'
 import PageContainer from './components/PageContainer'
 import { withName, withlog, withData } from './decorators/hocNew'
 
-@withNme('这是标题')
+@withName('这是标题')
 @withlog
 @withData
 class TestComposition extends Component {
@@ -79,4 +79,7 @@ class TestComposition extends Component {
 }
 
 export default TestComposition
+
+// 如果不想使用装饰器写法，也可以这样使用高阶组件包裹组件
+// export default withData(withLog(withName(TestComponent)))
 ```
