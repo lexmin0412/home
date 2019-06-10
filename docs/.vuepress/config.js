@@ -6,6 +6,10 @@ module.exports = {
     repo: "https://github.com/cathe-zhang/notes",
     nav: [
       // { text: "taro相关", link: "/Taro/Taro踩坑指南.md" },
+      {
+        text: 'starxing',
+        link: 'https://1415801689xing.github.io/starxingblog/'
+      }
     ],
     sidebar: [
       {
@@ -15,13 +19,55 @@ module.exports = {
           "/",
           "/HTTP请求状态码",
           "/mac操作指南",
-          "/npm发布node包指北",
           "/移动端兼容性问题解决方案",
           "/项目目录",
           "/markdown相关/",
-          "/vuepress部署博客",
-          "/小程序获取经纬度不准确的问题",
           "/前端技术栈"
+        ]
+      },
+      {
+        title: '博客部署',
+        collapsable: true,
+        children: [
+          "/博客部署/vuepress部署博客",
+        ]
+      },
+      {
+        title: '小程序',
+        collapsable: false,
+        children: [
+          '/小程序/微信小程序获取经纬度不准确的解决方案',
+        ]
+      },
+      {
+        title: "React",
+        collapsable: false,
+        children: [
+          "/React相关/React生命周期概述",
+          "/React相关/React高阶组件"
+        ]
+      },
+      {
+        title: "Taro",
+        collapsable: false,
+        children: ["/Taro/Taro踩坑指南"]
+      },
+      {
+        title: "Git",
+        collapsable: false,
+        children: [
+          "/Git相关/",
+          "/Git相关/git报错的解决方案.md",
+          "/Git相关/git提交日志规范.md",
+          "/Git相关/github pages配置.md",
+        ]
+      },
+      {
+        title: "package manage",
+        collapsable: false,
+        children: [
+          "/npm相关/npm发布node包指北",
+          "/npm相关/npm常用命令.md"
         ]
       },
       {
@@ -40,34 +86,9 @@ module.exports = {
         ]
       },
       {
-        title: "Git相关",
-        collapsable: false,
-        children: [
-          "/Git相关/",
-          "/Git相关/git报错的解决方案.md",
-          "/Git相关/git提交日志规范.md",
-          "/Git相关/github pages配置.md",
-        ]
-      },
-      {
         title: "H5 api",
         collapsable: false,
         children: ["/H5 api/"]
-      },
-      {
-        title: "npm相关",
-        collapsable: false,
-        children: ["/npm相关/npm常用命令.md"]
-      },
-      {
-        title: "React相关",
-        collapsable: false,
-        children: ["/React相关/React生命周期概述"]
-      },
-      {
-        title: "Taro",
-        collapsable: false,
-        children: ["/Taro/Taro踩坑指南"]
       },
       {
         title: "VSCode",
