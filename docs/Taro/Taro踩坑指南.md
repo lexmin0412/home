@@ -13,3 +13,9 @@
 - `relaunch`,  `redirect`, `navigateBack` 以及物理返回 会进 `componentWillUnmount`
 
 应用：如果要监听taro中的返回事件，则可以在页面中所有的跳转事件中加上一个state，然后在componentwillUnmount中判断state中的判断，用于判断是返回还是跳转
+
+### 不能在render函数中定义纯函数组件，否则打包为小程序的时候会报错
+```cmd
+taro Cannot read property 'isCallExpression' of null
+```
+解决：去除render return之前定义的纯函数组件 使用class组件代替
