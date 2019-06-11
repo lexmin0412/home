@@ -8,6 +8,7 @@
 
 ### vue相关
 - vetur, 提供vue语法高亮
+- vue vscode snippets, 提供vue代码块
 
 ### 开发服务器
 - live server, 简单的静态文件开发服务器
