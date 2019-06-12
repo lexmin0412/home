@@ -1,12 +1,16 @@
 module.exports = {
   title: "CellerChan Blog",
   description: "All I know is that I know nothing.",
-  base: "/blog/",
-  port: 8088,
+  base: "/blog/",  // basename
+  port: 8021,  // 端口
+  dest: 'dist',   // 打包输出文件存放的目录，默认为文档文件夹下的.vuepress/dist
+  markdown: {   // markdown配置对象
+    lineNumbers: true     // 是否在每个代码块的左侧显示行号
+  },
+  evergreen: false,   // 是否禁止esnext转译到es5以及对ie的polyfills，默认false 如果设置成true则只会支持现代浏览器
   themeConfig: {
     repo: "https://github.com/cathe-zhang/notes",
     nav: [
-      // { text: "taro相关", link: "/Taro/Taro踩坑指南.md" },
       {
         text: 'starxing',
         link: 'https://1415801689xing.github.io/starxingblog/'
