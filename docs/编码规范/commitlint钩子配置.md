@@ -45,3 +45,6 @@ git commit -m "foo: this will fail"
 ```
 
 > [参考](https://segmentfault.com/a/1190000015798675?utm_source=tag-newest)
+
+备注：
+似乎有出现Jenkins自动化构建时yarn install找不到commitlint包的情况，重新执行即可。
