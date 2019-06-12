@@ -2,6 +2,7 @@ module.exports = {
   title: "CellerChan Blog",
   description: "All I know is that I know nothing.",
   base: "/blog/",
+  port: 8088,
   themeConfig: {
     repo: "https://github.com/cathe-zhang/notes",
     nav: [
@@ -40,17 +41,25 @@ module.exports = {
         ]
       },
       {
+        title: "Taro",
+        collapsable: false,
+        children: ["/Taro/Taro踩坑指南"]
+      },
+      {
         title: "React",
         collapsable: false,
         children: [
           "/React相关/React生命周期概述",
-          "/React相关/React高阶组件"
+          "/React相关/React高阶组件",
+          "/React相关/使用react-app-rewired覆盖cra配置"
         ]
       },
       {
-        title: "Taro",
+        title: "Vue",
         collapsable: false,
-        children: ["/Taro/Taro踩坑指南"]
+        children: [
+          "/Vue/vue的生命周期",
+        ]
       },
       {
         title: "Git",
