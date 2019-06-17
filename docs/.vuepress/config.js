@@ -51,7 +51,8 @@ module.exports = {
         children: [
           "/React相关/React生命周期概述",
           "/React相关/React高阶组件",
-          "/React相关/使用react-app-rewired覆盖cra配置"
+          "/React相关/使用react-app-rewired覆盖cra配置",
+          "/React相关/使用组件复合而非组件继承"
         ]
       },
       {

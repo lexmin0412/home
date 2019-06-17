@@ -9,3 +9,5 @@
 - gitlab flow  / github flow  merge commit规范文档输入
 - flutter
 - taro实现react高阶组件的可行性评估
+
+使用组件复合而非组件继承：需要写一个笔记 可以使用商品详情购买选择属性弹窗来做例子
