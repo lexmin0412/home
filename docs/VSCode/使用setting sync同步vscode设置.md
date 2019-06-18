@@ -17,5 +17,5 @@ settings --> Developer settings --> Personal access tokens --> Generate new toke
 > `command+shift+p` 找到 `sync:reset settings`, 可以重置同步设置。
 
 ### 4. 我的配置
-- 我的token  `006225c31003cf9fbd02f6fad94cec2ed0e15a15`
-- 我的gistid `4fd4aa185a2d75242eec63d9ea0c7935`
+- 我的token  `014770be2bcce9f29398e4730af5a4a3da1db3ac`
+- 我的gistid `6ca46f7a87fd24c164bded70f34f45f4`
