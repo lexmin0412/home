@@ -35,9 +35,15 @@ Error: Cannot find module 'eslint-config-prettier/@typescript-eslint'
 
 当自动构建流程在服务器端出现问题时，第一步要做的就是在本地复现问题，只要能复现的问题都是可以解决的。
 
-
+css/高斯模糊的案例需要给出示例
 
 更新eslint-config-prettier到6.0版本即可解决
 
 
 typescript export enum
+
+#### service应该按照后台的模块来划分
+
+#### 不同项目保存的localStorage的键名最好不要有重名，最好加上项目前缀
+
+#### 对于技术团队来说，稳定性永远是第一位的。
