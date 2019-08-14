@@ -1,7 +1,8 @@
 # 使用rollup构建js库
 
 ### 参考
-[rollup中文网](https://www.rollupjs.com/guide/tutorial/#%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AAbundlecreating-your-first-bundle)
+- [rollup中文网](https://www.rollupjs.com/guide/tutorial/#%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AAbundlecreating-your-first-bundle)
+- [babel中文网-指南](https://www.babeljs.cn/docs/)
 
 ### 安装
 ```
@@ -9,14 +10,13 @@ npm install rollup --global
 ```
 
 ### 初始化项目结构
-```
+```bash
 ├── dist                   编译结果目录       
 ├── rollup                 打包脚本文件目录
 |   └── index.js           默认配置
 |   └── dev.js             开发时配置
 |   └── uat.js             uat环境配置
-|   └── prod.js            生产环境配置
-|   └── prod.js            生产环境配置       
+|   └── prod.js            生产环境配置     
 ├── src                    项目文件目录
 ├── README.md              项目说明文件
 ```
@@ -38,7 +38,7 @@ export default 'hello world!';
 ```
 
 ### 打包
-```powershell
+```bash
 rollup src/main.js --output.file dist/bundle.js --output.format cjs
 ```
 
@@ -58,6 +58,87 @@ export default {
 
 指定文件打包
 ```bash
-rollup --config rollup.config.js
+rollup --config rollup.config.js  # 指定使用根目录下的rollup.config.js中的配置打包
 ```
 
+### 引入babel
+> 注：以下所有操作均基于 `babel7`
+
+安装依赖
+```bash
+yarn add @babel/core -D  # 引入babel核心库
+yarn add @babel/preset-env -D  # ES next语法支持
+yarn add rollup-plugin-babel -D     # rollup babel插件
+yarn add rollup-plugin-node-resolve -D    # rollup无法识别node_modules中的包，使用此插件添加支持
+```
+
+安装完成之后的 `package.json` 中依赖如下：
+```json
+{
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  }
+}
+```
+
+新建 `.babelrc` 并添加如下代码：
+```js
+//  .babelrc
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "entry"
+      }
+    ]
+  ]
+}
+```
+
+在 `rollup.config.js` 中添加如下代码
+```js
+// rollup.config.js
+import babel from 'rollup-plugin-babel';
+import commonjs from 'rollup-plugin-commonjs'
+import resolve from 'rollup-plugin-node-resolve';
+
+export default {
+  plugins:[
+    resolve(),  // 解析node模块(rollup默认不支持)
+    commonjs({  // rollup-plugin-node-resolve 插件可以解决 ES6模块的查找导入，但是npm中的大多数包都是以CommonJS模块的形式出现的，所以需要使用这个插件将CommonJS模块转换为 ES2015 供 Rollup 处理
+      include: 'node_modules/**', // 包括
+      exclude: [],  // 排除
+    }),
+    babel({  // 运行babel配置
+      exclude: '**/node_modules/**'   // 不打包node_modules中的文件
+    }),
+    
+  ],
+}
+```
+
+此时经过rollup打包之后的 `bundle.js` 就已经将 `ES Next` 的语法转换成 `ES5` 语法了。
+
+### 压缩
+
+安装插件
+```shell
+yarn add rollup-plugin-uglify -D
+```
+
+在 `rollup.config.js` 中添加如下内容
+```js
+import { uglify } from "rollup-plugin-uglify";
+
+export default {
+  plugins:[
+    uglify()
+  ],
+}
+```
+
+再次执行打包，此时的 `bundle.js` 就被压缩了

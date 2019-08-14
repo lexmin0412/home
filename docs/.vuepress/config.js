@@ -122,6 +122,8 @@ module.exports = {
         collapsable: false,
         children: [
           "/前端工程化/",
+          "/前端工程化/项目框架搭建",
+          "/前端工程化/使用rollup构建库"
         ]
       },
       {
