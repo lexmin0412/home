@@ -3,6 +3,7 @@
 ### 参考
 - [rollup中文网](https://www.rollupjs.com/guide/tutorial/#%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AAbundlecreating-your-first-bundle)
 - [babel中文网-指南](https://www.babeljs.cn/docs/)
+- [npm搜索关键字:rollup-plugin](https://www.npmjs.com/search?q=rollup-plugin)
 
 ### 安装
 ```
@@ -123,7 +124,9 @@ export default {
 
 此时经过rollup打包之后的 `bundle.js` 就已经将 `ES Next` 的语法转换成 `ES5` 语法了。
 
-### 压缩
+### 其他插件
+
+#### 压缩
 
 安装插件
 ```shell
@@ -142,3 +145,46 @@ export default {
 ```
 
 再次执行打包，此时的 `bundle.js` 就被压缩了
+
+#### 打包后展示文件大小
+
+安装插件
+```shell
+yarn add rollup-plugin-filesize
+```
+
+在 `rollup.config.js` 中添加如下内容
+```js
+import filesize from 'rollup-plugin-filesize';
+
+export default {
+  plugins:[
+    filesize()
+  ],
+}
+```
+
+再次执行打包, 打包结果输出比正常打包多出了方框内的内容，可以看到输出文件的大小
+![filesize](./images/rollup_plugins_filesize.png)
+
+### 发布至npm
+
+更改package.json
+```json
+{
+  "main": "src/index.js",  // 入口文件
+  "module": "src/index.js",  // import引用指向
+}
+```
+
+```bash
+npm version <version>  # 指定版本号
+npm login   # 登录npm
+npm publish  # npm发布
+```
+
+### 在项目中使用
+```js
+import utils from 'js-utils'
+console.log(utils)
+```
