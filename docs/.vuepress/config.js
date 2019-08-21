@@ -123,7 +123,8 @@ module.exports = {
         children: [
           "/前端工程化/",
           "/前端工程化/项目框架搭建",
-          "/前端工程化/使用rollup构建js库"
+          "/前端工程化/使用rollup构建js库",
+          "/前端工程化/package.json配置详解"
         ]
       },
       {
