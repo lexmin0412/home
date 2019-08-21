@@ -124,12 +124,35 @@ export default {
 
 此时经过rollup打包之后的 `bundle.js` 就已经将 `ES Next` 的语法转换成 `ES5` 语法了。
 
-### 其他插件
+到此为止，我们已经可以完成一个js工具类库的全部开发了，如果要进行其他更多操作，请查看下面的内容。
+
+### 其他插件(可选)
+
+#### TypeScript支持: [rollup-plugin-typescript](http://npm.taobao.org/package/rollup-plugin-typescript)
+
+安装依赖
+```bash
+# rollup-plugin-typescrip需要依赖typescript tslib, 所以也要一并安装这两个包
+yarn add rollup-plugin-typescript typescript tslib -D
+```
+
+在 `rollup.config.js` 中添加如下内容：
+```js
+import typescript from 'rollup-plugin-typescript';
+
+export default {
+  input: 'src/index.ts',   // 修改入口文件后缀为ts
+  plugins:[
+    typescript(),  // typescript支持
+  ],
+}
+```
+
 
 #### 压缩
 
 安装插件
-```shell
+```bash
 yarn add rollup-plugin-uglify -D
 ```
 
