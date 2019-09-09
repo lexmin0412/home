@@ -1,0 +1,44 @@
+name: Node CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ strategy.matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ strategy.matrix.node-version }}
+    - name: 执行npm install
+      run: |
+        npm install
+      env:
+        CI: true
+    - name: 执行npm run build:h5
+      run: |
+        npm run build:h5
+    - name: 进入dist文件夹 准备提交代码
+      run: |
+        echo 'cd dist/ 进入dist文件夹'
+        cd dist/
+        echo 'ls 查看dist文件夹下的所有文件'
+        ls
+        echo 'git init'
+        git init
+        echo 'git config --global user.name 设置用户名'
+        git config --global user.name cathe-zhang
+        echo 'git config --global user.email 设置邮箱'
+        git config --global user.email zhangle_media@hotmail.com
+        echo 'git add .'
+        git add .
+        echo 'git commit -m "deploy"'
+        git commit -m 'deploy'
+        git push -f https://cathe-zhang:1234567890qazzm@github.com/cathe-zhang/blog.git master:gh-pages
