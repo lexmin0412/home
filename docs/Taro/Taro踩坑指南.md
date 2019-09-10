@@ -107,3 +107,9 @@ export default class BackTop extends Component<IProps> {
 	}
 }
 ```
+
+### 行内样式自动转换
+```js
+// 如果在设计稿上是10px，这里就传入10	返回一个字符串 h5单位为rem 小程序端为rpx
+Taro.pxTransform(10)
+```
