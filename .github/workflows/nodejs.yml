@@ -1,7 +1,15 @@
 name: Node CI
 
-on: [push]
-
+# 指定触发action的事件
+on:
+  push:
+    # 指定触发指定事件的分支 仅master触发
+    branches:
+      - master
+      - dev
+  pull_request:   # 待测试
+    branches:
+      - master
 jobs:
   build:
 
@@ -29,16 +37,24 @@ jobs:
       run: |
         echo 'cd dist/ 进入dist文件夹'
         cd dist/
+
         echo 'ls 查看dist文件夹下的所有文件'
         ls
+
         echo 'git init'
         git init
+
         echo 'git config --global user.name 设置用户名'
         git config --global user.name cathe-zhang
+
+        echo 'git config --global user.name 设置用户邮箱'
         echo 'git config --global user.email 设置邮箱'
         git config --global user.email zhangle_media@hotmail.com
+
         echo 'git add .'
         git add .
+
         echo 'git commit -m "deploy"'
         git commit -m 'deploy'
-        git push -f https://cathe-zhang:1234567890qazzm@github.com/cathe-zhang/blog.git master:gh-pages
+
+        git push -f https://cathe-zhang:${{ secrets.PWD }}@github.com/cathe-zhang/blog.git master:gh-pages
