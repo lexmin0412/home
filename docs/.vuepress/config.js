@@ -18,6 +18,17 @@ module.exports = {
     ],
     sidebar: [
       {
+        title: "前端工程化",
+        collapsable: false,
+        children: [
+          "/前端工程化/",
+          "/前端工程化/使用Github Actions自动化构建项目",
+          "/前端工程化/项目框架搭建",
+          "/前端工程化/使用rollup构建js库",
+          "/前端工程化/package.json配置详解"
+        ]
+      },
+      {
         title: "杂",
         collapsable: false,
         children: [
@@ -115,16 +126,6 @@ module.exports = {
         collapsable: false,
         children: [
           "/Vue/vue的生命周期",
-        ]
-      },
-      {
-        title: "前端工程化",
-        collapsable: false,
-        children: [
-          "/前端工程化/",
-          "/前端工程化/项目框架搭建",
-          "/前端工程化/使用rollup构建js库",
-          "/前端工程化/package.json配置详解"
         ]
       },
       {
