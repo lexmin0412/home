@@ -92,7 +92,7 @@ jobs:
         git commit -m 'deploy'
 
         echo 'git push'
-        # 这里的secret.PWD是在github-settings中添加的secret 值是github密码  也可以写成secrets.GITHUB_TOKEN 暂时不知道为什么
+        # 这里的secret.PWD是在github-repo-settings中添加的secret(如果是这种需要每个repo都加一个secret) 值是github密码  如果写成secrets.GITHUB_TOKEN 所有repo都可以用
         git push -f https://cathe-zhang:${{ secrets.PWD }}@github.com/cathe-zhang/github_action_test.git master:gh-pages
 ```
 
