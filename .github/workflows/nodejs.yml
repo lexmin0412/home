@@ -57,4 +57,5 @@ jobs:
         echo 'git commit -m "deploy"'
         git commit -m 'deploy'
 
-        git push -f https://cathe-zhang:${{ secrets.PWD }}@github.com/cathe-zhang/blog.git master:gh-pages
+        echo 'git push'
+        git push -f https://cathe-zhang:${{ secrets.GITHUB_TOKEN }}@github.com/cathe-zhang/blog.git master:gh-pages
