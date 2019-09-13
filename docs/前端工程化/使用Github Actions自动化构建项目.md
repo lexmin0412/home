@@ -40,8 +40,7 @@ on:
     # 指定触发指定事件的分支 仅master触发
     branches:
       - master
-      - dev
-  pull_request:   # 待测试
+  pull_request:
     branches:
       - master
 jobs:
@@ -80,10 +79,10 @@ jobs:
         git init
 
         echo 'git config --global user.name 设置用户名'
-        git config --global user.name cathe-zhang
+        git config --global user.name <git-user-name>
 
         echo 'git config --global user.email 设置邮箱'
-        git config --global user.email zhangle_media@hotmail.com
+        git config --global user.email <git-user-email>
 
         echo 'git add .'
         git add .
@@ -92,7 +91,7 @@ jobs:
         git commit -m 'deploy'
 
         echo 'git push'
-        # 这里的secret.PWD是在github-repo-settings中添加的secret(如果是这种需要每个repo都加一个secret) 值是github密码  如果写成secrets.GITHUB_TOKEN 所有repo都可以用
+        # 这里的secret.PWD是在github-repo-settings中添加的secret(如果是这种需要每个repo都加一个secret)  如果写成secrets.GITHUB_TOKEN 或者github密码(泄露个人信息，一般不用) 所有repo都可以用
         git push -f https://cathe-zhang:${{ secrets.PWD }}@github.com/cathe-zhang/github_action_test.git master:gh-pages
 ```
 
