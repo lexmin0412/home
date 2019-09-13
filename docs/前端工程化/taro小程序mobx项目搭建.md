@@ -226,10 +226,10 @@ class Header extends Component<IProps> {
         }}
       >
         <View className="inner"
-          // style={{
-          //   height: 44 + statusBarHeight + 'px',    // 这两行的注释要打开 这里关闭是vuepress无法识别模版字符串的问题
-          //   padding: `${statusBarHeight}px 20px 0`,
-          // }}
+          style={{
+            height: 44 + statusBarHeight + 'px',    // 这两行的注释要打开 这里关闭是vuepress无法识别模版字符串的问题
+            padding: statusBarHeight + 'px' + ' 20px 0`,
+          }}
         >
           {
             showBack ?
