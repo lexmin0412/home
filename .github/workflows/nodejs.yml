@@ -45,11 +45,11 @@ jobs:
         git init
 
         echo 'git config --global user.name 设置用户名'
-        git config --global user.name cathe-zhang
+        git config --global user.name ${{ secrets.USER_NAME }}
 
         echo 'git config --global user.name 设置用户邮箱'
         echo 'git config --global user.email 设置邮箱'
-        git config --global user.email zhangle_media@hotmail.com
+        git config --global user.email ${{ secrets.USER_EMAIL }}
 
         echo 'git add .'
         git add .
