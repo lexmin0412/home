@@ -17,13 +17,15 @@ module.exports = {
       }
     ],
     sidebar: [
+      "/",
+      "/前端技术栈",
       {
         title: "前端工程化",
         collapsable: false,
         children: [
           "/前端工程化/",
           "/前端工程化/使用Github Actions自动化构建项目",
-          "/前端工程化/项目框架搭建",
+          "/前端工程化/taro小程序mobx项目搭建",
           "/前端工程化/使用rollup构建js库",
           "/前端工程化/package.json配置详解"
         ]
@@ -32,7 +34,6 @@ module.exports = {
         title: "杂",
         collapsable: false,
         children: [
-          "/",
           "/HTTP请求状态码",
           "/mac操作指南",
           "/移动端兼容性问题解决方案",
