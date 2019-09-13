@@ -1,12 +1,14 @@
 # taro小程序mobx项目搭建
 
-### 创建基础工程
-```
+## 创建基础工程
+
+```shell
 taro init my_miniprogram
 ```
 
-### 完善项目结构
-```cmd
+## 完善项目结构
+
+```shell
 ├── dist                   编译结果目录
 ├── config                 配置目录
 |   ├── dev.js             开发时配置
@@ -41,6 +43,7 @@ taro init my_miniprogram
 ### 文件引用提示
 
 更改 `config/index.js` ，增加 `alias` 配置， 这一步是为了在打包时能够解析出来简写的路径，否则会当成npm包去解析，没有同名的包则会自动安装npm包
+
 ```js
 const path = require('path');
 const config = {
@@ -230,32 +233,32 @@ class Header extends Component<IProps> {
         >
           {
             showBack ?
-              <View className="left"
-                style={{
-                  width: 100 + 'px',
-                  height: 44 + 'px',
-                  lineHeight: 44 + 'px',
-                }}
+            <View className="left"
+              style={{
+                width: 100 + 'px',
+                height: 44 + 'px',
+                lineHeight: 44 + 'px',
+              }}
+            >
+              <View className="back"
+                onClick={this.backClick.bind(this)}
               >
-                <View className="back"
-                  onClick={this.backClick.bind(this)}
-                >
-                  返回
-                </View>
-                <View className="back-to-index"
-                  onClick={this.backToIndex.bind(this)}
-                >
-                  首页
-                </View>
+                返回
               </View>
-              :
-              <View className="left"
-                style={{
-                  width: 100 + 'px',
-                  height: 44 + 'px',
-                  lineHeight: 44 + 'px',
-                }}
-              ></View>
+              <View className="back-to-index"
+                onClick={this.backToIndex.bind(this)}
+              >
+                首页
+              </View>
+            </View>
+            :
+            <View className="left"
+              style={{
+                width: 100 + 'px',
+                height: 44 + 'px',
+                lineHeight: 44 + 'px',
+              }}
+            ></View>
           }
           <View className="title"
             style={{
