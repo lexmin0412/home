@@ -44,6 +44,8 @@ jobs:
         # echo 'git init'
         # git init
 
+        git remote set-url origin https://github.com/cathe-zhang/blog.git
+
         # echo 'git config --global user.name 设置用户名'
         git config --global user.name ${{ secrets.USER_NAME }}
 
