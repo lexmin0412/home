@@ -53,6 +53,7 @@ jobs:
         git branch -l
         
         echo 'git checkout -b dev origin/dev'
+        git checkout -b master origin/master
         git checkout -b dev origin/dev
         
         echo 'git branch -l'
