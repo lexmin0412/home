@@ -51,6 +51,13 @@ jobs:
         git branch -r
         echo 'git branch -l'
         git branch -l
+        
+        echo 'git checkout -b dev origin/dev'
+        git checkout -b dev origin/dev
+        
+        echo 'git branch -l'
+        git branch -l
+        
 
         git config --global user.name ${{ secrets.USER_NAME }}
         git config --global user.email ${{ secrets.USER_EMAIL }}
