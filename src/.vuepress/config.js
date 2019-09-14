@@ -3,7 +3,7 @@ module.exports = {
   description: "All I know is that I know nothing.",
   base: "/blog/",  // basename
   port: 8021,  // 端口
-  dest: 'dist',   // 打包输出文件存放的目录，默认为文档文件夹下的.vuepress/dist
+  dest: 'docs',   // 打包输出文件存放的目录，默认为文档文件夹下的.vuepress/dist
   markdown: {   // markdown配置对象
     lineNumbers: true     // 是否在每个代码块的左侧显示行号
   },

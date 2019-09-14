@@ -1,4 +1,4 @@
 /node_modules
 /docs/.vuepress/dist/
-/dist
+/docs
 package-lock.json

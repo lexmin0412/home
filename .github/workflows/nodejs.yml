@@ -30,9 +30,9 @@ jobs:
         npm install
       env:
         CI: true
-    - name: 执行npm run docs:build
+    - name: 执行npm run build
       run: |
-        npm run docs:build
+        npm run build
     - name: 进入dist文件夹 准备提交代码
       run: |
         # echo 'cd dist/ 进入dist文件夹'
