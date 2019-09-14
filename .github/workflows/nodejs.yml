@@ -47,7 +47,9 @@ jobs:
         
         git fetch origin 
         
+        echo 'git branch -r'
         git branch -r
+        echo 'git branch -l'
         git branch -l
 
         git config --global user.name ${{ secrets.USER_NAME }}
