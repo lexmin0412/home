@@ -51,15 +51,15 @@ jobs:
         git branch -r
         echo 'git branch -l'
         git branch -l
-        
-        echo 'git checkout -b master origin/master'
-        git checkout -b master origin/master
 
         echo 'git add .'
         git add .
 
         echo 'git commit -m "deploy"'
         git commit -m 'deploy'
+        
+        echo 'git checkout -b master origin/master'
+        git checkout -b master origin/master
         
         echo 'git checkout -b dev origin/dev'
         git checkout -b dev origin/dev
