@@ -55,4 +55,4 @@ jobs:
         echo 'git push'
         # git push -f https://cathe-zhang:${{ secrets.GITHUB_TOKEN }}@github.com/cathe-zhang/blog.git master:gh-pages
 
-        git push -f https://cathe-zhang:${{ secrets.USER_PWD }}@github.com/cathe-zhang/blog.git master
+        git push -f https://cathe-zhang:${{ secrets.USER_PWD }}@github.com/cathe-zhang/blog.git HEAD:master
