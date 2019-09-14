@@ -43,7 +43,7 @@ jobs:
         # echo 'git init'
         # git init
         
-        git remote add origin https://cathe-zhang:${{ secrets.USER_PWD }}@github.com/cathe-zhang/blog.git
+        git remote set-url origin https://cathe-zhang:${{ secrets.USER_PWD }}@github.com/cathe-zhang/blog.git
 
         git config --global user.name ${{ secrets.USER_NAME }}
         git config --global user.email ${{ secrets.USER_EMAIL }}
