@@ -35,21 +35,21 @@ jobs:
         npm run docs:build
     - name: 进入dist文件夹 准备提交代码
       run: |
-        echo 'cd dist/ 进入dist文件夹'
-        cd dist/
+        # echo 'cd dist/ 进入dist文件夹'
+        # cd dist/
 
         echo 'ls 查看dist文件夹下的所有文件'
         ls
 
-        echo 'git init'
-        git init
+        # echo 'git init'
+        # git init
 
-        echo 'git config --global user.name 设置用户名'
-        git config --global user.name ${{ secrets.USER_NAME }}
+        # echo 'git config --global user.name 设置用户名'
+        # git config --global user.name ${{ secrets.USER_NAME }}
 
-        echo 'git config --global user.name 设置用户邮箱'
-        echo 'git config --global user.email 设置邮箱'
-        git config --global user.email ${{ secrets.USER_EMAIL }}
+        # echo 'git config --global user.name 设置用户邮箱'
+        # echo 'git config --global user.email 设置邮箱'
+        # git config --global user.email ${{ secrets.USER_EMAIL }}
 
         echo 'git add .'
         git add .
@@ -58,4 +58,5 @@ jobs:
         git commit -m 'deploy'
 
         echo 'git push'
-        git push -f https://cathe-zhang:${{ secrets.GITHUB_TOKEN }}@github.com/cathe-zhang/blog.git master:gh-pages
+        # git push -f https://cathe-zhang:${{ secrets.GITHUB_TOKEN }}@github.com/cathe-zhang/blog.git master:gh-pages
+        git push -f https://cathe-zhang:${{ secrets.GITHUB_TOKEN }}@github.com/cathe-zhang/blog.git master
