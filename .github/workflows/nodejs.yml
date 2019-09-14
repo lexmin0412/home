@@ -5,7 +5,6 @@ on:
   push:
     # 指定触发指定事件的分支 仅master触发
     branches:
-      - master
       - dev
   pull_request:   # 待测试
     branches:
@@ -62,5 +61,5 @@ jobs:
         echo 'git push'
         # git push -f https://cathe-zhang:${{ secrets.GITHUB_TOKEN }}@github.com/cathe-zhang/blog.git master:gh-pages
         # git push -f https://cathe-zhang:${{ secrets.GITHUB_TOKEN }}@github.com/cathe-zhang/blog.git master
-        
+
         git push -f https://cathe-zhang:${{ secrets.USER_PWD }}@github.com/cathe-zhang/blog.git master
