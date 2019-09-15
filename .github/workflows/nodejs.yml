@@ -63,10 +63,10 @@ jobs:
         git commit -m 'deploy'
         
         echo 'git checkout -b master origin/master'
-        git checkout -b master origin/master
+        # git checkout -b master origin/master
         
         echo 'git checkout -b dev origin/dev'
-        git checkout -b dev origin/dev
+        # git checkout -b dev origin/dev
         
         echo 'git branch -l'
         git branch -l
@@ -74,4 +74,4 @@ jobs:
         echo 'git push'
         # git push -f https://cathe-zhang:${{ secrets.GITHUB_TOKEN }}@github.com/cathe-zhang/blog.git master:gh-pages
 
-        git push -f origin master
+        git push -f origin HEAD:master
