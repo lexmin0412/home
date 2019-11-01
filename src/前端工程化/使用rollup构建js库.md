@@ -1,29 +1,29 @@
 # 使用rollup构建js库
 
 ### 参考
+
 - [rollup中文网](https://www.rollupjs.com/guide/tutorial/#%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AAbundlecreating-your-first-bundle)
 - [babel中文网-指南](https://www.babeljs.cn/docs/)
 - [npm搜索关键字:rollup-plugin](https://www.npmjs.com/search?q=rollup-plugin)
 
 ### 安装
-```
-npm install rollup --global
+
+```bash
+yarn global add rollup
 ```
 
 ### 初始化项目结构
+
 ```bash
-├── dist                   编译结果目录       
-├── rollup                 打包脚本文件目录
-|   └── index.js           默认配置
-|   └── dev.js             开发时配置
-|   └── uat.js             uat环境配置
-|   └── prod.js            生产环境配置     
+├── dist                   编译结果目录
 ├── src                    项目文件目录
 ├── README.md              项目说明文件
 ```
 
 ### 新建入口文件
+
 将以下代码粘贴到新建的文件 `src/main.js` 中：
+
 ```js
 // src/main.js
 import foo from './foo.js';
@@ -33,12 +33,14 @@ export default function () {
 ```
 
 然后创建入口文件引用的 `foo` 模块
+
 ```js
 // src/foo.js
 export default 'hello world!';
 ```
 
 ### 打包
+
 ```bash
 rollup src/main.js --output.file dist/bundle.js --output.format cjs
 ```
@@ -46,6 +48,7 @@ rollup src/main.js --output.file dist/bundle.js --output.format cjs
 ### 指定配置文件
 
 创建配置文件 `rollup.config.js` 并增加如下代码
+
 ```js
 // rollup.config.js
 export default {
@@ -58,34 +61,41 @@ export default {
 ```
 
 指定文件打包
+
 ```bash
 rollup --config rollup.config.js  # 指定使用根目录下的rollup.config.js中的配置打包
 ```
 
 ### 引入babel
+
 > 注：以下所有操作均基于 `babel7`
 
 安装依赖
+
 ```bash
-yarn add @babel/core -D  # 引入babel核心库
-yarn add @babel/preset-env -D  # ES next语法支持
-yarn add rollup-plugin-babel -D     # rollup babel插件
-yarn add rollup-plugin-node-resolve -D    # rollup无法识别node_modules中的包，使用此插件添加支持
+$yarn add @babel/core -D  # 引入babel核心库
+$yarn add @babel/preset-env -D  # ES next语法支持
+$yarn add rollup-plugin-babel -D     # rollup babel插件
+$yarn add rollup-plugin-node-resolve -D    # rollup无法识别node_modules中的包，使用此插件添加支持
+$yarn add rollup-plugin-commonjs -D    # Convert CommonJS modules to ES6, so they can be included in a Rollup bundle 转换commonjs模块为ES6模块, 使它能够被rollup识别 需要与rollup-plugin-node-resolve一起使用
 ```
 
 安装完成之后的 `package.json` 中依赖如下：
+
 ```json
 {
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-node-resolve": "^5.2.0"
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-commonjs": "^10.1.0",
   }
 }
 ```
 
 新建 `.babelrc` 并添加如下代码：
+
 ```js
 //  .babelrc
 {
@@ -101,6 +111,7 @@ yarn add rollup-plugin-node-resolve -D    # rollup无法识别node_modules中的
 ```
 
 在 `rollup.config.js` 中添加如下代码
+
 ```js
 // rollup.config.js
 import babel from 'rollup-plugin-babel';
@@ -131,12 +142,14 @@ export default {
 #### TypeScript支持: [rollup-plugin-typescript](http://npm.taobao.org/package/rollup-plugin-typescript)
 
 安装依赖
+
 ```bash
-# rollup-plugin-typescrip需要依赖typescript tslib, 所以也要一并安装这两个包
-yarn add rollup-plugin-typescript typescript tslib -D
+# rollup-plugin-typescript需要依赖typescript和tslib, 所以也要一并安装这两个包
+$yarn add typescript tslib rollup-plugin-typescript -D
 ```
 
 在 `rollup.config.js` 中添加如下内容：
+
 ```js
 import typescript from 'rollup-plugin-typescript';
 
@@ -148,15 +161,18 @@ export default {
 }
 ```
 
+然后我们就可以在项目中愉快的使用 `TypeScript` 了。
 
 #### 压缩
 
 安装插件
+
 ```bash
-yarn add rollup-plugin-uglify -D
+$yarn add rollup-plugin-uglify -D
 ```
 
 在 `rollup.config.js` 中添加如下内容
+
 ```js
 import { uglify } from "rollup-plugin-uglify";
 
@@ -172,11 +188,13 @@ export default {
 #### 打包后展示文件大小
 
 安装插件
+
 ```shell
 yarn add rollup-plugin-filesize
 ```
 
 在 `rollup.config.js` 中添加如下内容
+
 ```js
 import filesize from 'rollup-plugin-filesize';
 
@@ -193,6 +211,7 @@ export default {
 ### 发布至npm
 
 更改package.json
+
 ```json
 {
   "main": "src/index.js",  // 入口文件
@@ -207,6 +226,7 @@ npm publish  # npm发布
 ```
 
 ### 在项目中使用
+
 ```js
 import utils from 'js-utils'
 console.log(utils)
