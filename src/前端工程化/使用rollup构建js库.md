@@ -66,6 +66,17 @@ export default {
 rollup --config rollup.config.js  # 指定使用根目录下的rollup.config.js中的配置打包
 ```
 
+### 指定项目引用入口
+
+需要指定打包生成的文件为引用项目入口, 否则在引用此js库时无法正确引用其中的内容。
+
+```json
+// package.json
+{
+  "main": "dist/bundle.js",
+}
+```
+
 ### 引入babel
 
 > 注：以下所有操作均基于 `babel7`
@@ -161,6 +172,32 @@ export default {
 ```
 
 然后我们就可以在项目中愉快的使用 `TypeScript` 了。
+
+#### 语法提示
+
+在项目中引入js库之后，如果没有语法提示，使用体验将会非常差。为此，我们需要声明 `d.ts` 文件让我们的js库支持语法提示。
+
+可以使用微软的 `dts-gen` 库来一键生成 `d.ts` 文件
+
+```bash
+# 全局安装 dts-gen
+yarn global add dts-gen
+# 全局安装我们的js库  这里的coordinate-transfer是我们开发的js库的名称
+yarn global add coordinate-transfer
+# 执行命令生成d.ts文件
+dts-gen -m coordinate-transfer
+```
+
+执行以上命令会在执行的目录下生成一个与指定js库同名的 `d.ts` 文件,
+
+最后一步, 需要声明 `package.json` 文件中的 `typings` 属性指向生成的文件，如文件路径为根文件夹下的 `types/index.d.ts`, 则进行如下设置：
+
+```json
+// package.json
+{
+  "typings": "types/index.d.ts",
+}
+```
 
 #### 压缩
 
