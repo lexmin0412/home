@@ -128,7 +128,6 @@ export default {
     babel({  // 运行babel配置
       exclude: '**/node_modules/**'   // 不打包node_modules中的文件
     }),
-    
   ],
 }
 ```
