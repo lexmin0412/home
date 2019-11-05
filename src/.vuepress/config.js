@@ -26,7 +26,7 @@ module.exports = {
           "/前端工程化/",
           "/前端工程化/使用Github Actions自动化构建项目",
           "/前端工程化/taro小程序mobx项目搭建",
-          "/前端工程化/使用rollup构建js库",
+          "/前端工程化/使用rollup构建Javascript库",
           "/前端工程化/package.json配置详解"
         ]
       },
