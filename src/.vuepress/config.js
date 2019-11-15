@@ -122,7 +122,7 @@ module.exports = {
           "/VSCode/vscode扩展",
           "/VSCode/工作区相关",
           "/VSCode/使用setting sync同步vscode设置",
-          "/VSCode/React生命周期概述"
+          "/VSCode/VSCode插件开发"
         ]
       },
       {
