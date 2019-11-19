@@ -1,5 +1,9 @@
 # 使用rollup构建Javascript库
 
+## Why Rollup?
+
+为什么使用Rollup呢？因为Rollup就是为了打包js库而生的，它不包含任何多余的代码，简单小巧，不像webpack打包生成的bundle文件会包含很多webpack相关的代码。
+
 ## 参考
 
 - [rollup中文网](https://www.rollupjs.com/guide/tutorial/#%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AAbundlecreating-your-first-bundle)

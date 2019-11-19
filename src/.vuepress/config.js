@@ -24,10 +24,46 @@ module.exports = {
         collapsable: false,
         children: [
           "/前端工程化/",
+          "/前端工程化/项目文档的编写",
+          "/前端工程化/GitLab协作开发流程",
+          "/前端工程化/使用webpack搭建移动端单页应用",
+          "/前端工程化/使用rollup构建Javascript库",
+          "/前端工程化/前端项目脚手架搭建",
           "/前端工程化/使用Github Actions自动化构建项目",
           "/前端工程化/taro小程序mobx项目搭建",
-          "/前端工程化/使用rollup构建Javascript库",
           "/前端工程化/package.json配置详解"
+        ]
+      },
+      {
+        title: "React",
+        collapsable: false,
+        children: [
+          "/React相关/React Hooks详解",
+          "/React相关/React最佳实践",
+          "/React相关/React生命周期概述",
+          "/React相关/React高阶组件",
+          "/React相关/使用react-app-rewired覆盖cra配置",
+        ]
+      },
+      {
+        title: "Vue",
+        collapsable: false,
+        children: [
+          "/Vue/vue的生命周期",
+        ]
+      },
+      {
+        title: '小程序',
+        collapsable: false,
+        children: [
+          '/小程序/微信小程序获取经纬度不准确的解决方案',
+        ]
+      },
+      {
+        title: "JavaScript",
+        collapsable: false,
+        children: [
+          "/JavaScript/"
         ]
       },
       {
@@ -101,16 +137,6 @@ module.exports = {
         ]
       },
       {
-        title: "React",
-        collapsable: false,
-        children: [
-          "/React相关/React生命周期概述",
-          "/React相关/React高阶组件",
-          "/React相关/使用react-app-rewired覆盖cra配置",
-          "/React相关/使用组件复合而非组件继承"
-        ]
-      },
-      {
         title: "Taro",
         collapsable: false,
         children: ["/Taro/Taro踩坑指南"]
@@ -126,24 +152,10 @@ module.exports = {
         ]
       },
       {
-        title: "Vue",
-        collapsable: false,
-        children: [
-          "/Vue/vue的生命周期",
-        ]
-      },
-      {
         title: '博客部署',
         collapsable: false,
         children: [
           "/博客部署/vuepress部署博客",
-        ]
-      },
-      {
-        title: '小程序',
-        collapsable: false,
-        children: [
-          '/小程序/微信小程序获取经纬度不准确的解决方案',
         ]
       },
       {
