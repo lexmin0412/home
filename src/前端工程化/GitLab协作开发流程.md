@@ -1,4 +1,4 @@
-# GitLab协作开发流程
+# Gitlab协作开发流程
 
 ## Git Commit规范
 
