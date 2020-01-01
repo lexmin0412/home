@@ -33,6 +33,7 @@ module.exports = {
           "/前端工程化/前端项目脚手架搭建",
           "/前端工程化/使用Github Actions自动化构建项目",
           "/前端工程化/taro小程序mobx项目搭建",
+          "/前端工程化/taro多端项目搭建",
           "/前端工程化/package.json配置详解"
         ]
       },
@@ -121,9 +122,12 @@ module.exports = {
         ]
       },
       {
-        title: "H5 api",
+        title: "H5开发",
         collapsable: false,
-        children: ["/H5 api/"]
+        children: [
+          "/H5开发/",
+          "/H5开发/H5定位终极解决方案.md"
+        ]
       },
       {
         title: "markdown相关",
@@ -179,6 +183,13 @@ module.exports = {
         title: "联调的经验",
         collapsable: false,
         children: ["/联调的经验/与后端联调"]
+      },
+      {
+        title: '总结与展望',
+        collapsable: false,
+        children: [
+          "/总结与展望/2019年度总结",
+        ]
       },
     ],
     sidebarDepth: 2
