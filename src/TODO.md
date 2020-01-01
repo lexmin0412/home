@@ -18,7 +18,16 @@
 
 使用组件复合而非组件继承：需要写一个笔记 可以使用商品详情购买选择属性弹窗来做例子
 
+编译型语言和解释型语言的区别
 
+```
+
+```
+
+装饰器详解
+
+ajax和webSoceket的区别
+https://www.runoob.com/html/html5-websocket.html
 
 
 git stash  git status git apply git stash pop
@@ -34,6 +43,8 @@ webkit-mask-image
 markdown 导航不能使用驼峰 无法识别
 
 这里将会包含所有和前端工程化相关的内容
+
+在react项目中应用classnames库
 
 
 
