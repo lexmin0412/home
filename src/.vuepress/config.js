@@ -191,6 +191,13 @@ module.exports = {
           "/总结与展望/2019年度总结",
         ]
       },
+      {
+        title: '点滴',
+        collapsable: false,
+        children: [
+          '/点滴/2020.01.14'
+        ]
+      }
     ],
     sidebarDepth: 2
   }
