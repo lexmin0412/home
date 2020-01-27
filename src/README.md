@@ -31,4 +31,6 @@
 
 最后，我正在做这些事情：[TODO](./TODO.md)
 
+![我的前端知识收藏](https://github.com/cathe-zhang/frontend_collections/tree/master)
+
 希望早日成为一个不可替代的前端大佬吧。
