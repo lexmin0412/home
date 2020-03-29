@@ -4,8 +4,7 @@
 
 ## 项目计划
 
-- [ ] master作为开发分支，gh-pages作为展示分支
-- [ ] 使用node.js实现config.js文件列表自动配置
+- [x] 使用node.js实现config.js文件列表自动配置
 
 ## 学习路线
 
