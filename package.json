@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "dev": "vuepress dev src",
-    "build": "vuepress build src"
+    "dev": "node ./build/getfiles.js && vuepress dev src",
+    "build": "node ./build/getfiles.js && vuepress build src"
   },
   "devDependencies": {
     "vuepress": "^0.14.11"
