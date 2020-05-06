@@ -227,6 +227,7 @@ module.exports = {
             children: [
                   "/编码规范/commitlint钩子配置",
                   "/编码规范/editorconfig配置",
+                  "/编码规范/规范工具收集",
             ]
           },
           {
