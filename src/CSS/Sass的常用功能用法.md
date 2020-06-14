@@ -107,3 +107,33 @@ $border-color: #999;
   border-radius: 8rpx;
 }
 ```
+
+### 1.4 判断
+
+在一些公用的mixin样式中，可能会根据传入参数的不同决定部分属性的值。
+
+如文本溢出的样式，单行的多行的部分属性不同：
+
+```scss
+// 多行截取
+@mixin textOrient($line) {
+  // 单行
+  @if $line==1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  // 多行
+  @else {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    // 需要加上这一句autoprefixer的忽略规则 否则这一行样式加不上 导致无法展示省略号
+
+    /*! autoprefixer: ignore next */
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+  }
+}
+```
