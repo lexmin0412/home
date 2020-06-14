@@ -21,6 +21,7 @@
     - [ ] js工具类库 
   - [ ] React项目模板搭建，使用 hooks+context 完成状态管理
 - [ ] 将jest引入项目框架中
+- [ ] github actions的深入研究，自动化构建流程精进
 - [ ] 文档学习
   - [ ] Git官方文档（重点hooks及merge相关）
   - [ ] TypeScript文档
