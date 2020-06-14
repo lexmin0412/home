@@ -15,5 +15,5 @@
   - [ ] 微信jssdk/小程序Api文档
 
 # 2020已完成的目标
-- [x] 搭建自己的第一个真正可用于生产环境的模版(taro-template)
+- [x] 搭建并完善自己的第一个真正可用于生产环境的项目模版(taro-template)(已在两个线上项目中应用)
 - [x] 使用fs api完成 blog 和 taro-template 项目的文件扫描功能
