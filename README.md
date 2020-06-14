@@ -18,6 +18,7 @@
     - [ ] react
     - [ ] vue+vant 移动端
     - [ ] vue+element pc端
+    - [ ] js工具类库 
   - [ ] React项目模板搭建，使用 hooks+context 完成状态管理
 - [ ] 将jest引入项目框架中
 - [ ] 文档学习
