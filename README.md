@@ -24,6 +24,9 @@
     - [ ] vue+element pc端
     - [ ] js工具类库 
   - [ ] React项目模板搭建，使用 hooks+context 完成状态管理
+- [ ] canvas
+  - [ ] 封装刮刮乐组件(兼容小程序/h5)
+  - [ ] 封装海报生成组件(兼容小程序/h5)
 - [ ] 将jest引入项目框架中
 - [ ] github actions的深入研究，自动化构建流程精进
 - [ ] 文档学习
