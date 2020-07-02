@@ -38,7 +38,9 @@
   - [ ] Taro框架的搭建
   - [ ] 多端框架的image错误处理
   - [ ] Jest的应用(最好有与其他测试框架的对比)
-- [ ] [翻译docusaurus中文文档](https://github.com/cathe-zhang/docusaurus)
+- [ ] 开源相关
+  - [ ] [翻译docusaurus中文文档](https://github.com/cathe-zhang/docusaurus)
+  - [ ] 仿照Taro2.x版本，实现Taro next的Taro-ui
 
 # 2020已完成的目标
 - [x] 搭建并完善自己的第一个真正可用于生产环境的项目模版(taro-template)(已在两个线上项目中应用)
