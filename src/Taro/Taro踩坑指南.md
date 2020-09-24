@@ -88,7 +88,7 @@ export default class BackTop extends Component<IProps> {
   
     state = {};
   
-    // 错误时间监听 设置唯一state
+    //错误事件监听 设置唯一state
     handleError = key => {
         const { type } = this.props
         this.setState({
