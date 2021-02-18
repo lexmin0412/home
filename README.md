@@ -2,7 +2,8 @@
 
 [点此前往](https://cathe-zhang.github.io/blog)
 
-# 2020未完成的目标
+## 2020未完成的目标
+
 - [ ] 用Flutter或小程序云开发做一个自己的日历程序，如果是APP要支持文件导入，小程序则支持云端同步
 - [ ] Taro相关
   - [ ] taro next 模版的搭建
@@ -42,10 +43,12 @@
   - [ ] [翻译docusaurus中文文档](https://github.com/cathe-zhang/docusaurus)
   - [ ] 仿照Taro2.x版本，实现Taro next的Taro-ui
 
-# 2020已完成的目标
+## 2020已完成的目标
+
 - [x] 搭建并完善自己的第一个真正可用于生产环境的项目模版(taro-template)(已在两个线上项目中应用)
 - [x] 使用fs api完成 blog 和 taro-template 项目的文件扫描功能
 
-# 其他
+## 其他
+
 - [ ] js基础巩固
 - [ ] 演讲训练
