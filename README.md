@@ -1,6 +1,6 @@
 # 我的个人博客
 
-[点此前往](https://cathe-zhang.github.io/blog)
+[点此前往](https://lexmin0412.github.io/blog)
 
 ## 2020未完成的目标
 
