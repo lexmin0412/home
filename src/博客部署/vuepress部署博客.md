@@ -28,7 +28,7 @@ mkdir .vuepress
 在 `/docs/.vuepress` 目录下新建 `config.js` 并添加以下代码
 ```js
 module.exports = {
-  title: "CellerChan Blog",    // 博客标题
+  title: "lexmin0412 Blog",    // 博客标题
   description: "All I know is that I know nothing.",  // 描述
   base: "/blog/",   // 部署base，打包时会默认在引用的静态资源文件前加上此前缀
   themeConfig: {  // 主题配置

@@ -1,5 +1,5 @@
 module.exports = {
-      title: "CellerChan Blog",
+      title: "Lexmin0412 Blog",
       description: "All I know is that I know nothing.",
       base: "/blog/",  // basename
       port: 8021,  // 端口

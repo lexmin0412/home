@@ -6,10 +6,10 @@
 ```javascript
 const user = {
   id: 123,
-  name: 'cellerchan'
+  name: 'lexmin0412'
 }
 const { name } = user
-console.log(name)  // cellerchan
+console.log(name)  // lexmin0412
 ```
 
 - 解构并使用别名
@@ -17,10 +17,10 @@ console.log(name)  // cellerchan
 ```javascript
 const user = {
   id: 123,
-  nick_name: 'cellerchan'
+  nick_name: 'lexmin0412'
 }
 const { nick_name: nickName } = user  // 原名在前，命名在后
-console.log(nickName)  // cellerchan
+console.log(nickName)  // lexmin0412
 ```
 
 ```javascript
@@ -39,7 +39,7 @@ console.log(degree)  // Masters
 ```javascript
 const user = {
   id: 123,
-  name: 'cellerchan'
+  name: 'lexmin0412'
 }
 const {
   education: {
@@ -53,7 +53,7 @@ console.log(degree)  // undefined
 ```javascript
 const user = {
   id: 123,
-  name: 'cellerchan'
+  name: 'lexmin0412'
 }
 const {
   education: {

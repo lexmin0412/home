@@ -38,15 +38,15 @@ feat(*): 新增流量池功能
 
 - 分支类型, 取 `git commit规范` 中的推荐值;
 - 功能模块名称, 如流量池, 则命名为 `flowpool`
-- 开发者gitlab账户名, 如 cellerchan
+- 开发者gitlab账户名, 如 lexmin0412
 
-综合以上规范，当我们即将开始一个名为流量池的新功能开发时, 我们应该从master新建一个名为 `feat_flowpool_cellerchan` 的分支。
+综合以上规范，当我们即将开始一个名为流量池的新功能开发时, 我们应该从master新建一个名为 `feat_flowpool_lexmin0412` 的分支。
 
 其他合法的分支名包括但不限于以下类型：
 
 ```bash
-# 名为流量池的新功能开发, 开发者名称为cellerchan
-feat_flowpool_cellerchan
+# 名为流量池的新功能开发, 开发者名称为lexmin0412
+feat_flowpool_lexmin0412
 # 红包支付紧急问题处理, 开发者名为cathe
 fix_redPacket_pay_cathe
 # taro依赖版本升级, 开发者名为hehs
