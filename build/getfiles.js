@@ -25,7 +25,7 @@ const getPages = () => {
       },
       evergreen: false,   // 是否禁止esnext转译到es5以及对ie的polyfills，默认false 如果设置成true则只会支持现代浏览器
       themeConfig: {
-        repo: "https://github.com/cathe-zhang/blog",
+        repo: "https://github.com/lexmin0412/blog",
         nav: [
           {
             text: 'Taro X Blog',
