@@ -28,8 +28,8 @@ const getPages = () => {
         repo: "https://github.com/cathe-zhang/blog",
         nav: [
           {
-            text: 'starxing',
-            link: 'https://1415801689xing.github.io/starxingblog/'
+            text: 'Taro X Blog',
+            link: 'https://lexmin0412.github.io/tarox-blog/'
           }
         ],
         sidebar: [`
