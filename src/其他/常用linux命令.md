@@ -39,3 +39,10 @@ mv website/wtils-website/* website/  将website/wtils-website下的所有文件�
 rm -r <directory>  # 删除指定文件夹下的所有文件
 rm <fileName>   # 删除指定文件
 ```
+
+### 终端
+
+| 命令    | 说明                                     |
+|---------|------------------------------------------|
+| `clear` | 清除当前屏幕内容，但仍可上滑查看历史内容 |
+| `reset` | 清除当前屏幕内容，上滑不可查看历史       |
