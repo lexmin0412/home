@@ -74,12 +74,12 @@ module.exports = {
             title: "React相关",
             collapsable: false,
             children: [
-                  "/React相关/React Context",
                   "/React相关/React Diff算法",
                   "/React相关/React Hooks详解",
                   "/React相关/React最佳实践",
                   "/React相关/React生命周期概述",
                   "/React相关/React组件设计原则",
+                  "/React相关/React组件跨层级通信之Context",
                   "/React相关/React高阶组件",
                   "/React相关/使用react-app-rewired覆盖cra配置",
             ]
