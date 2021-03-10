@@ -22,6 +22,8 @@ React 中使用 Context 实现祖代组件向后代组件跨层级传值。Vue �
 
 用于指定当前Class绑定的Context，声明后可在生命周期/方法中通过 `this.context` 访问对应的 context。
 
+> **此 API 只能订阅单个 Context。**
+
 `Context.displayName`
 
 >  接收一个字符串，React DevTools 使用该字符串来确定 context 要显示的内容。下述组件在 DevTools 中将显示为 MyDisplayName：
@@ -32,6 +34,14 @@ MyContext.displayName = 'MyDisplayName';
 <MyContext.Provider> // "MyDisplayName.Provider" 在 DevTools 中
 <MyContext.Consumer> // "MyDisplayName.Consumer" 在 DevTools 中
 ```
+
+### 用法
+
+| 用法                                 | 场景                       |
+| ------------------------------------ | -------------------------- |
+| Context.Provider / Context.Consumer  | Class组件使用多个Context   |
+| Context.Provider / Class.contextType | Class组件使用单个Context   |
+| Context.Provider / useContext hook   | 函数组件或自定义hook中使用 |
 
 ## 示例
 
@@ -220,8 +230,9 @@ export default class ConsumerProviderPage extends React.Component {
 import React, { Component } from 'react'
 import { ThemeContext } from './../contexts'
 
-class ContextTypeDemo extends Component {
-	render() {
+export default class ContextTypeDemo extends Component {
+	static contextType = ThemeContext
+  render() {
 		const theme = this.context
 		return (
 			<div className='context-type'>
@@ -230,10 +241,6 @@ class ContextTypeDemo extends Component {
 		)
 	}
 }
-
-ContextType.contextType = ThemeContext
-
-export default ContextTypeDemo
 
 ```
 
@@ -274,6 +281,72 @@ export default class ConsumerProviderPage extends React.Component {
 	}
 }
 ```
+
+### 4. 使用 useContext Hook
+
+```jsx
+/**
+ * src/pages/UseContextDemo.js
+ */
+import React, { useContext } from 'react'
+import { ThemeContext } from './../contexts'
+
+export default function UseContextDemo(props) {
+	const { themeColor } = useContext(ThemeContext)
+	return (
+		<div className='use-context-page'
+			style={{
+				border: `1px solid ${themeColor}`,
+				marginTop: '10px',
+				color: themeColor
+			}}
+		>
+			useContext {themeColor}
+		</div>
+	)
+}
+
+```
+
+```jsx
+/**
+ * src/pages/ConsumerProvider.js
+ */
+import React from 'react'
+import UseContextDemo from './../components/UseContextDemo'
+import { ThemeProvider } from '../contexts'
+
+export default class ConsumerProviderPage extends React.Component {
+	constructor(props) {
+		super(props)
+		this.state = {
+			theme: {
+				themeColor: 'red'
+			}
+		}
+	}
+
+	changeColor = () => {
+		const { theme: {themeColor} } = this.state
+		this.setState({
+			theme: {
+				themeColor: themeColor === 'red' ? 'green' : 'red',
+			}
+		})
+	}
+
+	render() {
+		const { theme, location } = this.state
+		return (
+			<ThemeProvider value={theme}>
+				<UseContextDemo />
+			</ThemeProvider>
+		)
+	}
+}
+```
+
+
 
 ## 注意
 
@@ -389,6 +462,49 @@ export default class ContextConsumer extends Component {
   }
 }
 ```
+
+### 2. 优化建议
+
+因为 context 会使用参考标识（reference identity）来决定何时进行渲染，这里可能会有一些陷阱，当 provider 的父组件进行重渲染时，可能会在 consumers 组件中触发意外的渲染。举个例子，当每一次 Provider 重渲染时，以下的代码会重渲染所有下面的 consumers 组件，因为 `value` 属性总是被赋值为新的对象：
+
+```jsx
+class App extends React.Component {
+  render() {
+    return (
+      // 每次渲染时候的context对比，{something: 'something'} === {something: 'something'} 永远返回 false，则所有Consumer都会重新渲染。
+      <MyContext.Provider value={{something: 'something'}}>
+        <Toolbar />
+      </MyContext.Provider>
+    );
+  }
+}
+```
+
+为了防止这种情况，将 value 状态提升到父节点的 state 里：
+
+```jsx
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: {something: 'something'},
+    };
+  }
+
+  render() {
+    return (
+      // 在这种写法下，当Provider的父组件重新渲染时，只要value未发生真正的变化，则不会触发子组件的重新渲染。
+      <Provider value={this.state.value}>
+        <Toolbar />
+      </Provider>
+    );
+  }
+}
+```
+
+### 3. 不要滥用
+
+Context 的优点也是它的缺点。每次 Provider value 变化时，都会导致其下所有的 consumer 组件重新渲染，在某些情况下可能会导致性能问题。
 
 ## 参考
 
