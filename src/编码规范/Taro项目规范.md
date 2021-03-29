@@ -460,7 +460,3 @@ module.exports = {
 }
 
 ```
-
-## 鸣谢
-
-感谢既是基友也是老大的 [starxing](https://1415801689xing.github.io/starxingblog/) 小姐姐，让我第一次有机会来整一个大项目的框架，哈哈哈。
