@@ -17,14 +17,7 @@
 
 - [ ] 用Flutter或小程序云开发做一个自己的日历程序，如果是APP要支持文件导入，小程序则支持云端同步
 - [ ] Taro相关
-  - [ ] taro next 模版的搭建
-  - [ ] 新建一个repo，用于新组件库的搭建并用于 taro next模版
-  - [ ] 搭建Taro2.x组件库，用于工作中的项目
-    - [x] 组件库初始化
-    - [x] github actions自动构建
-    - [ ] 文档编写
-    - [ ] 演示界面
-  - [ ] taro-plugin-init-app / taro-plugin-mp / taro-plugin-check-env 插件的完善，以及更多插件的开发
+  - [x] taro-plugin-init-app / taro-plugin-mp / taro-plugin-check-env 插件的完善，以及更多插件的开发
 - [ ] 其他框架相关
   - [ ] 多模版项目脚手架的搭建, 支持多种框架
     - [ ] taro
@@ -56,7 +49,7 @@
 
 ## 2020已完成
 
-- [x] 搭建并完善自己的第一个真正可用于生产环境的项目模版(taro-template)(已在两个线上项目中应用)
+- [x] 搭建并完善自己的第一个真正可用于生产环境的项目模版(taro-template)(已在三个线上项目中成功应用)
 - [x] 使用fs api完成 blog 和 taro-template 项目的文件扫描功能
 
 ## 其他
