@@ -15,7 +15,14 @@
 
 ## 2021未完成
 
-- [ ] 设计一个 markdown 主题，并实现为一个 docsify/vuepress插件
+- 博客开发
+  - [ ] 设计一个 markdown 主题，并实现为一个 docsify/vuepress插件
+
+- 代码规范
+
+  - [ ] commitlint插件开发
+  - [ ] eslint插件开发
+  - [ ] stylelint插件开发
 
 ## 2020未完成
 
@@ -31,7 +38,7 @@
     - [ ] react
     - [ ] vue+vant 移动端
     - [ ] vue+element pc端
-    - [ ] js工具类库 
+    - [ ] js工具类库
   - [ ] React项目模板搭建，使用 hooks+context 完成状态管理
 - [ ] canvas
   - [ ] 封装刮刮乐组件(兼容小程序/h5)
