@@ -707,6 +707,41 @@ FancyInput = forwardRef(FancyInput);
 
 尽可能使用标准的 `useEffect` 以避免阻塞视觉更新。
 
+### useCallback
+
+把内联回调函数和依赖项作为参数传递给 `useCallback`，它将返回该函数的 memorize 版本，也就是说会缓存该函数。
+
+示例：
+
+```jsx
+import { useCallback } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+
+export default function HookIndex() {
+
+	const store = useSelector(({count})=>({count}))
+	const dispatch = useDispatch()
+	const { count } = store
+  
+  // 优化：使用useCallback缓存方法，防止每次渲染都重新定义
+  const add = useCallback(() => {
+    // 调用dispatch
+    dispatch({type: 'INCREMENT'})
+  }, [])  // 无依赖项
+
+	return (
+		<div>
+			Hook Index
+			<div>
+				{count}
+			</div>
+			<button onClick={()=>dispatch({type: 'INCREMENT'})}>add</button>
+			<button onClick={()=>dispatch({type: 'DECREMENT'})}>minus</button>
+		</div>
+	)
+}
+```
+
 ### useDebugValue
 
 ```tsx
@@ -715,9 +750,9 @@ useDebugValue(value)
 
 官方的说明是指能够在 React 开发者工具中显示自定义 hook 的标签，但是实际使用未能生效，暂时还找不到原因。
 
-### useCallback / useMemo
+### useMemo
 
-暂时还没完全理解这两个 hook。
+暂时还没完全理解这个 hook。
 
 
 
