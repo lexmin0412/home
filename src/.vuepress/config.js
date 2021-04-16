@@ -48,11 +48,70 @@ module.exports = {
           //   ]
           // },
           {
+            title: "React",
+            collapsable: false,
+            children: [
+                  // "/React相关/React Diff算法",
+                  "/React相关/React Hooks",
+                  // "/React相关/React最佳实践",
+                  // "/React相关/React生命周期概述",
+                  // "/React相关/React组件设计原则",
+                  "/React相关/React组件跨层级通信之Context",
+                  "/React相关/React高阶组件-HOC",
+                  "/React相关/Redux使用及其原理",
+                  "/React相关/使用React Portal实现一个通知栏组件",
+                  // "/React相关/使用react-app-rewired覆盖cra配置",
+            ]
+          },
+          {
+            title: "Taro",
+            collapsable: false,
+            children: [
+                  "/Taro/Taro踩坑指南",
+            ]
+          },
+          {
+            title: "小程序",
+            collapsable: false,
+            children: [
+                  "/小程序/微信小程序获取经纬度不准确的解决方案",
+            ]
+          },
+          {
             title: "H5开发",
             collapsable: false,
             children: [
                   "/H5开发/H5定位终极解决方案",
                   // "/H5开发/",
+            ]
+          },
+          {
+            title: "编码规范",
+            collapsable: false,
+            children: [
+                  "/编码规范/Taro项目规范",
+                  "/编码规范/commitlint钩子配置",
+                  "/编码规范/editorconfig配置",
+                  "/编码规范/规范工具收集",
+            ]
+          },
+          {
+            title: "前端工程化",
+            collapsable: false,
+            children: [
+                  "/前端工程化/Gitlab_Tag创建规范",
+                  "/前端工程化/Gitlab_协作开发流程",
+                  // "/前端工程化/",
+                  // "/前端工程化/package.json配置详解",
+                  "/前端工程化/taro多端项目搭建",
+                  "/前端工程化/taro小程序mobx项目搭建",
+                  "/前端工程化/使用Github Actions自动化构建项目",
+                  "/前端工程化/使用rollup构建Javascript库",
+                  // "/前端工程化/使用webpack搭建移动端单页应用",
+                  // "/前端工程化/前后端分离",
+                  // "/前端工程化/前端项目脚手架搭建",
+                  // "/前端工程化/框架搭建的难题",
+                  // "/前端工程化/项目文档的编写",
             ]
           },
           // {
@@ -78,29 +137,6 @@ module.exports = {
           //   ]
           // },
           {
-            title: "React相关",
-            collapsable: false,
-            children: [
-                  // "/React相关/React Diff算法",
-                  "/React相关/React Hooks",
-                  // "/React相关/React最佳实践",
-                  // "/React相关/React生命周期概述",
-                  // "/React相关/React组件设计原则",
-                  "/React相关/React组件跨层级通信之Context",
-                  "/React相关/React高阶组件-HOC",
-                  "/React相关/Redux使用及其原理",
-                  "/React相关/使用React Portal实现一个通知栏组件",
-                  // "/React相关/使用react-app-rewired覆盖cra配置",
-            ]
-          },
-          {
-            title: "Taro",
-            collapsable: false,
-            children: [
-                  "/Taro/Taro踩坑指南",
-            ]
-          },
-          {
             title: "VSCode",
             collapsable: false,
             children: [
@@ -124,13 +160,13 @@ module.exports = {
                   "/app交互/app webview中富文本超链接点击无反应的解决方案",
             ]
           },
-          {
-            title: "markdown相关",
-            collapsable: false,
-            children: [
-                  "/markdown相关/",
-            ]
-          },
+          // {
+          //   title: "markdown相关",
+          //   collapsable: false,
+          //   children: [
+          //         "/markdown相关/",
+          //   ]
+          // },
           {
             title: "npm相关",
             collapsable: false,
@@ -157,22 +193,10 @@ module.exports = {
             ]
           },
           {
-            title: "前端工程化",
+            title: "博客部署",
             collapsable: false,
             children: [
-                  "/前端工程化/Gitlab_Tag创建规范",
-                  "/前端工程化/Gitlab_协作开发流程",
-                  // "/前端工程化/",
-                  // "/前端工程化/package.json配置详解",
-                  "/前端工程化/taro多端项目搭建",
-                  "/前端工程化/taro小程序mobx项目搭建",
-                  "/前端工程化/使用Github Actions自动化构建项目",
-                  "/前端工程化/使用rollup构建Javascript库",
-                  // "/前端工程化/使用webpack搭建移动端单页应用",
-                  // "/前端工程化/前后端分离",
-                  // "/前端工程化/前端项目脚手架搭建",
-                  // "/前端工程化/框架搭建的难题",
-                  // "/前端工程化/项目文档的编写",
+                  "/博客部署/vuepress部署博客",
             ]
           },
           // {
@@ -182,26 +206,12 @@ module.exports = {
           //         "/前端资源集合/",
           //   ]
           // },
-          {
-            title: "博客部署",
-            collapsable: false,
-            children: [
-                  "/博客部署/vuepress部署博客",
-            ]
-          },
-          {
-            title: "回顾与展望",
-            collapsable: false,
-            children: [
-            ]
-          },
-          {
-            title: "小程序",
-            collapsable: false,
-            children: [
-                  "/小程序/微信小程序获取经纬度不准确的解决方案",
-            ]
-          },
+          // {
+          //   title: "回顾与展望",
+          //   collapsable: false,
+          //   children: [
+          //   ]
+          // },
           // {
           //   title: "总结与展望",
           //   collapsable: false,
@@ -238,16 +248,6 @@ module.exports = {
           //         "/用户交互/",
           //   ]
           // },
-          {
-            title: "编码规范",
-            collapsable: false,
-            children: [
-                  "/编码规范/Taro项目规范",
-                  "/编码规范/commitlint钩子配置",
-                  "/编码规范/editorconfig配置",
-                  "/编码规范/规范工具收集",
-            ]
-          },
           // {
           //   title: "联调的经验",
           //   collapsable: false,
