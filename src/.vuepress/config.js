@@ -17,71 +17,80 @@ module.exports = {
           }
         ],
         sidebar: [
-          {
-            title: "CSS",
-            collapsable: false,
-            children: [
-                  "/CSS/Sass的常用功能用法",
-                  "/CSS/img标签底部白边处理",
-                  "/CSS/使用filter属性实现高斯模糊",
-                  "/CSS/样式统一",
-            ]
-          },
-          {
-            title: "ES6_plus",
-            collapsable: false,
-            children: [
-                  "/ES6_plus/ES6与commonJS模块导入导出的区别",
-                  "/ES6_plus/Promise",
-                  "/ES6_plus/",
-                  "/ES6_plus/数组方法",
-            ]
-          },
-          {
-            title: "Git相关",
-            collapsable: false,
-            children: [
-                  "/Git相关/",
-                  "/Git相关/github pages配置",
-                  "/Git相关/git报错的解决方案",
-                  "/Git相关/git提交日志规范",
-            ]
-          },
+          // {
+          //   title: "CSS",
+          //   collapsable: false,
+          //   children: [
+          //         "/CSS/Sass的常用功能用法",
+          //         "/CSS/img标签底部白边处理",
+          //         "/CSS/使用filter属性实现高斯模糊",
+          //         "/CSS/样式统一",
+          //   ]
+          // },
+          // {
+          //   title: "ES6_plus",
+          //   collapsable: false,
+          //   children: [
+          //         "/ES6_plus/ES6与commonJS模块导入导出的区别",
+          //         "/ES6_plus/Promise",
+          //         "/ES6_plus/",
+          //         "/ES6_plus/数组方法",
+          //   ]
+          // },
+          // {
+          //   title: "Git相关",
+          //   collapsable: false,
+          //   children: [
+          //         "/Git相关/",
+          //         "/Git相关/github pages配置",
+          //         "/Git相关/git报错的解决方案",
+          //         "/Git相关/git提交日志规范",
+          //   ]
+          // },
           {
             title: "H5开发",
             collapsable: false,
             children: [
                   "/H5开发/H5定位终极解决方案",
-                  "/H5开发/",
+                  // "/H5开发/",
             ]
           },
-          {
-            title: "JS",
-            collapsable: false,
-            children: [
-                  "/JS/",
-            ]
-          },
-          {
-            title: "JavaScript",
-            collapsable: false,
-            children: [
-                  "/JavaScript/",
-                  "/JavaScript/构造函数",
-            ]
-          },
+          // {
+          //   title: "JS",
+          //   collapsable: false,
+          //   children: [
+          //         "/JS/",
+          //   ]
+          // },
+          // {
+          //   title: "JavaScript",
+          //   collapsable: false,
+          //   children: [
+          //         "/JavaScript/",
+          //         "/JavaScript/构造函数",
+          //   ]
+          // },
+          // {
+          //   title: "Linux",
+          //   collapsable: false,
+          //   children: [
+          //         "/Linux/Linux常用命令大全",
+          //   ]
+          // },
           {
             title: "React相关",
             collapsable: false,
             children: [
-                  "/React相关/React Diff算法",
-                  "/React相关/React Hooks详解",
-                  "/React相关/React最佳实践",
-                  "/React相关/React生命周期概述",
-                  "/React相关/React组件设计原则",
+                  // "/React相关/React Diff算法",
+                  "/React相关/React Hooks",
+                  // "/React相关/React最佳实践",
+                  // "/React相关/React生命周期概述",
+                  // "/React相关/React组件设计原则",
                   "/React相关/React组件跨层级通信之Context",
-                  "/React相关/React高阶组件",
-                  "/React相关/使用react-app-rewired覆盖cra配置",
+                  "/React相关/React高阶组件-HOC",
+                  "/React相关/Redux使用及其原理",
+                  "/React相关/使用React Portal实现一个通知栏组件",
+                  // "/React相关/使用react-app-rewired覆盖cra配置",
             ]
           },
           {
@@ -98,16 +107,16 @@ module.exports = {
                   "/VSCode/VSCode插件开发",
                   "/VSCode/vscode扩展",
                   "/VSCode/使用setting sync同步vscode设置",
-                  "/VSCode/工作区相关",
+                  // "/VSCode/工作区相关",
             ]
           },
-          {
-            title: "Vue",
-            collapsable: false,
-            children: [
-                  "/Vue/vue的生命周期",
-            ]
-          },
+          // {
+          //   title: "Vue",
+          //   collapsable: false,
+          //   children: [
+          //         "/Vue/vue的生命周期",
+          //   ]
+          // },
           {
             title: "app交互",
             collapsable: false,
@@ -127,7 +136,7 @@ module.exports = {
             collapsable: false,
             children: [
                   "/npm相关/npm发布node包指北",
-                  "/npm相关/npm常用命令",
+                  // "/npm相关/npm常用命令",
             ]
           },
           {
@@ -136,14 +145,14 @@ module.exports = {
             children: [
                   "/其他/HTTP请求状态码",
                   "/其他/mac操作指南",
-                  "/其他/使用VIM编辑和保存文件",
+                  // "/其他/使用VIM编辑和保存文件",
                   "/其他/全栈图谱",
-                  "/其他/前端客服功能的设计",
+                  // "/其他/前端客服功能的设计",
                   "/其他/前端技术栈",
-                  "/其他/如何写出优雅的代码",
+                  // "/其他/如何写出优雅的代码",
                   "/其他/工具箱",
-                  "/其他/常用linux命令",
-                  "/其他/常用手机软件",
+                  // "/其他/常用linux命令",
+                  // "/其他/常用手机软件",
                   "/其他/移动端兼容性问题解决方案",
             ]
           },
@@ -153,26 +162,26 @@ module.exports = {
             children: [
                   "/前端工程化/Gitlab_Tag创建规范",
                   "/前端工程化/Gitlab_协作开发流程",
-                  "/前端工程化/",
-                  "/前端工程化/package.json配置详解",
+                  // "/前端工程化/",
+                  // "/前端工程化/package.json配置详解",
                   "/前端工程化/taro多端项目搭建",
                   "/前端工程化/taro小程序mobx项目搭建",
                   "/前端工程化/使用Github Actions自动化构建项目",
                   "/前端工程化/使用rollup构建Javascript库",
-                  "/前端工程化/使用webpack搭建移动端单页应用",
-                  "/前端工程化/前后端分离",
-                  "/前端工程化/前端项目脚手架搭建",
-                  "/前端工程化/框架搭建的难题",
-                  "/前端工程化/项目文档的编写",
+                  // "/前端工程化/使用webpack搭建移动端单页应用",
+                  // "/前端工程化/前后端分离",
+                  // "/前端工程化/前端项目脚手架搭建",
+                  // "/前端工程化/框架搭建的难题",
+                  // "/前端工程化/项目文档的编写",
             ]
           },
-          {
-            title: "前端资源集合",
-            collapsable: false,
-            children: [
-                  "/前端资源集合/",
-            ]
-          },
+          // {
+          //   title: "前端资源集合",
+          //   collapsable: false,
+          //   children: [
+          //         "/前端资源集合/",
+          //   ]
+          // },
           {
             title: "博客部署",
             collapsable: false,
@@ -193,42 +202,42 @@ module.exports = {
                   "/小程序/微信小程序获取经纬度不准确的解决方案",
             ]
           },
-          {
-            title: "总结与展望",
-            collapsable: false,
-            children: [
-                  "/总结与展望/2019年度总结",
-            ]
-          },
-          {
-            title: "未分类",
-            collapsable: false,
-            children: [
-                  "/未分类/2020.03.15",
-            ]
-          },
-          {
-            title: "测试用例",
-            collapsable: false,
-            children: [
-                  "/测试用例/购物车通用测试用例",
-            ]
-          },
-          {
-            title: "点滴",
-            collapsable: false,
-            children: [
-                  "/点滴/2019.11.19",
-                  "/点滴/2020.01.14",
-            ]
-          },
-          {
-            title: "用户交互",
-            collapsable: false,
-            children: [
-                  "/用户交互/",
-            ]
-          },
+          // {
+          //   title: "总结与展望",
+          //   collapsable: false,
+          //   children: [
+          //         "/总结与展望/2019年度总结",
+          //   ]
+          // },
+          // {
+          //   title: "未分类",
+          //   collapsable: false,
+          //   children: [
+          //         "/未分类/2020.03.15",
+          //   ]
+          // },
+          // {
+          //   title: "测试用例",
+          //   collapsable: false,
+          //   children: [
+          //         "/测试用例/购物车通用测试用例",
+          //   ]
+          // },
+          // {
+          //   title: "点滴",
+          //   collapsable: false,
+          //   children: [
+          //         "/点滴/2019.11.19",
+          //         "/点滴/2020.01.14",
+          //   ]
+          // },
+          // {
+          //   title: "用户交互",
+          //   collapsable: false,
+          //   children: [
+          //         "/用户交互/",
+          //   ]
+          // },
           {
             title: "编码规范",
             collapsable: false,
@@ -239,15 +248,14 @@ module.exports = {
                   "/编码规范/规范工具收集",
             ]
           },
-          {
-            title: "联调的经验",
-            collapsable: false,
-            children: [
-                  "/联调的经验/与后端联调",
-            ]
-          },
+          // {
+          //   title: "联调的经验",
+          //   collapsable: false,
+          //   children: [
+          //         "/联调的经验/与后端联调",
+          //   ]
+          // },
   ],
     sidebarDepth: 2
   }
 };
-    

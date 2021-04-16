@@ -54,7 +54,7 @@ const getPages = () => {
             collapsable: false,
             children: [`
 
-  
+
         // 去除后缀名
         innerDir.forEach((inItem,inIndex)=>{
           if ( inItem.indexOf('.md') > -1 ) {
@@ -79,7 +79,7 @@ const getPages = () => {
         indexLines = `${indexLines}
             ]
           },`
-  
+
       }
     })
 
@@ -89,7 +89,7 @@ const getPages = () => {
   }
 };
     `
-    
+
 
     fs.writeFileSync('./src/.vuepress/config.js', indexLines)
     console.log('页面扫描完成，.vuepress/config.js创建成功')
@@ -98,6 +98,6 @@ const getPages = () => {
 
 }
 
-getPages()
+// getPages()
 
 module.exports = getPages

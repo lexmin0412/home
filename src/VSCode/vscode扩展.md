@@ -1,4 +1,4 @@
-# VSCode扩展集
+# VSCode扩展集合
 
 - AutoFileName, 提供文件引用提示
 - Beautify，格式化html/css/js文件
