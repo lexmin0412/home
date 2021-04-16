@@ -197,6 +197,7 @@ module.exports = {
             collapsable: false,
             children: [
                   "/博客部署/vuepress部署博客",
+                  "/博客部署/docsify+vercel+github搭建博客",
             ]
           },
           // {
