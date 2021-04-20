@@ -121,14 +121,14 @@ module.exports = {
           //         "/JS/",
           //   ]
           // },
-          // {
-          //   title: "JavaScript",
-          //   collapsable: false,
-          //   children: [
-          //         "/JavaScript/",
-          //         "/JavaScript/构造函数",
-          //   ]
-          // },
+          {
+            title: "JavaScript",
+            collapsable: false,
+            children: [
+                  "/JavaScript/JavaScript中的this、call、apply",
+                  "/JavaScript/数组方法",
+            ]
+          },
           // {
           //   title: "Linux",
           //   collapsable: false,
@@ -176,6 +176,14 @@ module.exports = {
             ]
           },
           {
+            title: "博客部署",
+            collapsable: false,
+            children: [
+                  "/博客部署/vuepress部署博客",
+                  "/博客部署/docsify和vercel搭建博客",
+            ]
+          },
+          {
             title: "其他",
             collapsable: false,
             children: [
@@ -190,14 +198,6 @@ module.exports = {
                   // "/其他/常用linux命令",
                   // "/其他/常用手机软件",
                   "/其他/移动端兼容性问题解决方案",
-            ]
-          },
-          {
-            title: "博客部署",
-            collapsable: false,
-            children: [
-                  "/博客部署/vuepress部署博客",
-                  "/博客部署/docsify+vercel+github搭建博客",
             ]
           },
           // {
