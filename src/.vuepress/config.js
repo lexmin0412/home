@@ -187,6 +187,8 @@ module.exports = {
             title: "其他",
             collapsable: false,
             children: [
+									"/tools/常用网站",
+									"/tools/chrome插件",
                   "/其他/HTTP请求状态码",
                   "/其他/mac操作指南",
                   // "/其他/使用VIM编辑和保存文件",
