@@ -143,6 +143,7 @@ module.exports = {
                   "/VSCode/VSCode插件开发",
                   "/VSCode/vscode扩展",
                   "/VSCode/使用setting sync同步vscode设置",
+									"/VSCode/VSCode快捷键"
                   // "/VSCode/工作区相关",
             ]
           },
