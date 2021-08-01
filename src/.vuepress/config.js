@@ -17,6 +17,13 @@ module.exports = {
           }
         ],
         sidebar: [
+					{
+						title: '回顾与展望',
+						collapsable: false,
+						children: [
+							'/点滴/2021年中总结'
+						]
+					},
           // {
           //   title: "CSS",
           //   collapsable: false,
