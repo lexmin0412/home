@@ -195,6 +195,7 @@ module.exports = {
             title: "其他",
             collapsable: false,
             children: [
+									"/其他/前端代码审查清单",
 									"/其他/前端开发环境搭建",
 									"/tools/常用网站",
 									"/tools/chrome插件",
