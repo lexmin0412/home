@@ -1,4 +1,6 @@
-# 使用Github Actions自动化构建项目
+# 使用 Github Actions 实现前端应用部署及 npm 包发布自动化
+
+![Github Actions](./images/image-20211107031456265.png)
 
 当你想要在线上查看你的项目效果时，github actions 可以帮到你。
 
@@ -105,11 +107,11 @@ git push -u origin dev
 
 点击链接进入即可看到自动构建完成的应用了。从此以后，你只需要推送到 yml 文件中指定的分支，就可以自动触发构建，自动更新你的网站了。
 
-### 4. 扩展应用 - 自动发布 NPM 包
+## 4. 扩展应用 - 自动发布 NPM 包
 
 npm 发布其实跟上面的路程并无两样，只是第一步中要获取和设置的 github ACCESS_TOKEN 变成了 npm 的 ACCESS_TOKEN，第二步中的部署 github pages 脚本变成了 npm 发布脚本。
 
-#### 4.1 获取 npm access token 并设置到仓库
+### 4.1 获取 npm access token 并设置到仓库
 
 进入 [npm 官网](https://www.npmjs.com/) 并登录账号，然后点击右上角头像，点击 Access Tokens 进入 token 管理：
 
@@ -131,7 +133,7 @@ npm 发布其实跟上面的路程并无两样，只是第一步中要获取和�
 
 然后进入 Github 中的仓库设置，和第一步中设置 Access Token 的步骤一样，添加一个 key 为 `NPM_TOKEN` ，值为刚刚获取到的 npm access token 的 secret。
 
-#### 4.2 添加 npm 自动发包脚本
+### 4.2 添加 npm 自动发包脚本
 
 上面有说到，部署应用和发布 npm 包的区别只在于最后的一部分，我们将脚本稍作修改，将 `执行部署` 步骤改成 `npm 发布` 即可。
 
