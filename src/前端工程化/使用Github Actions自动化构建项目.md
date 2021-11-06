@@ -105,6 +105,75 @@ git push -u origin dev
 
 点击链接进入即可看到自动构建完成的应用了。从此以后，你只需要推送到 yml 文件中指定的分支，就可以自动触发构建，自动更新你的网站了。
 
+### 4. 扩展应用 - 自动发布 NPM 包
+
+npm 发布其实跟上面的路程并无两样，只是第一步中要获取和设置的 github ACCESS_TOKEN 变成了 npm 的 ACCESS_TOKEN，第二步中的部署 github pages 脚本变成了 npm 发布脚本。
+
+#### 4.1 获取 npm access token 并设置到仓库
+
+进入 [npm 官网](https://www.npmjs.com/) 并登录账号，然后点击右上角头像，点击 Access Tokens 进入 token 管理：
+
+![image-20211107023707441](images/image-20211107023707441.png)
+
+点击 Generate New Token：
+
+![image-20211107023803287](images/image-20211107023803287.png)
+
+出现如下的界面：
+
+![image-20211107023857562](images/image-20211107023857562.png)
+
+因为我们是需要用到 token 去发布 npm 包，所以这里要选择 Publish 类型，然后点击 Generate Token 按钮，Token 就生成了：
+
+![image-20211107024036315](images/image-20211107024036315.png)
+
+点击 Token 即可复制到剪贴板（注意这里的 Token 同样只会出现一次，记得保存到安全的地方）。
+
+然后进入 Github 中的仓库设置，和第一步中设置 Access Token 的步骤一样，添加一个 key 为 `NPM_TOKEN` ，值为刚刚获取到的 npm access token 的 secret。
+
+#### 4.2 添加 npm 自动发包脚本
+
+上面有说到，部署应用和发布 npm 包的区别只在于最后的一部分，我们将脚本稍作修改，将 `执行部署` 步骤改成 `npm 发布` 即可。
+
+```yml
+name: 构建博客
+on:
+  push:  # 指定触发事件
+    branches:
+      - dev  # 指定触发 action 的分支
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+
+		# 拉取github仓库代码
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+
+		# 执行依赖安装
+    - name: 安装依赖
+      run: |
+        npm install
+
+		# 执行构建步骤
+		- name: 构建
+      run: |
+			  npm run build
+
+    # 执行部署
+    - name: 发布到 NPM
+      uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/  # 设置发包npm地址仓库
+      - run: npm publish # 执行发布
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}} # 刚刚设置的 NPM_TOKEN
+```
+
 ### 参考资料
 
 - [github action](https://help.github.com/cn/articles/configuring-a-workflow)
