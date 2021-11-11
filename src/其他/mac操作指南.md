@@ -6,7 +6,7 @@
 |Command+Space|显示或隐藏“聚焦”搜索栏|
 |shift+command+3|当前可视区域截屏|
 |shift+command+4|自定义区域截屏1，无默认窗口|
-|shift+command+5|自定义区域截屏2，默认窗口|
+|shift+command+5|录屏|
 |shift+command+6|touchbar截屏|
 |Control+点击|唤起右键菜单|
 
