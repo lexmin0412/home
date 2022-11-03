@@ -39,7 +39,7 @@ chore：不属于以上类型的其他类型
 ```
 
 4. 测试
-```git
+```bash
 git add .
 git commit -m "foo: this will fail"
 ```
