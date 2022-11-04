@@ -63,7 +63,7 @@ export default defineConfig({
 				items: [
 					{
 						text: "Corepack 实践",
-						link: "/npm相关/Corepack实践",
+						link: "/npm相关/corepack实践",
 					},
 				],
 			},

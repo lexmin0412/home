@@ -13,7 +13,7 @@ hero:
   actions:
     - theme: brand
       text: 去阅读
-      link: /readme
+      link: /guide
     - theme: alt
       text: 在 Github 上查看
       link: https://github.com/lexmin0412/blog
