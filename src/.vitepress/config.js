@@ -59,11 +59,42 @@ export default defineConfig({
 				],
 			},
 			{
-				text: "npm相关",
+				text: "包管理",
 				items: [
 					{
 						text: "Corepack 实践",
 						link: "/npm相关/corepack实践",
+					},
+				],
+			},
+			{
+				text: "头脑风暴",
+				items: [
+					{
+						text: "电商需求体系",
+						link: "/brainstorming/e-commerce-pr-system",
+					},
+				],
+			},
+			{
+				text: "Nestjs",
+				items: [
+					{
+						text: "初始化应用",
+						link: "/nestjs/init-project",
+					},
+					{
+						text: "搭建接口文档",
+						link: "/nestjs/build-api-docs",
+					},
+				],
+			},
+			{
+				text: "others",
+				items: [
+					{
+						text: "comming soon",
+						link: "/plan/comming-soon",
 					},
 				],
 			},
