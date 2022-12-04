@@ -120,3 +120,87 @@ export class AddressController {
 ```
 
 ![](2022-12-02-01-41-27.png)
+
+### 声明响应结构及描述
+
+使用 ApiResponse 装饰器可以声明响应结构，此外 @nestjs/swagger 中还提供了基于 ApiResponse 的封装：
+
+- @ApiOkResponse() 状态码为 200 的正常响应
+- @ApiCreatedResponse()
+- @ApiAcceptedResponse()
+- @ApiNoContentResponse()
+- @ApiMovedPermanentlyResponse()
+- @ApiFoundResponse()
+- @ApiBadRequestResponse()
+- @ApiUnauthorizedResponse()
+- @ApiNotFoundResponse()
+- @ApiForbiddenResponse()
+- @ApiMethodNotAllowedResponse()
+- @ApiNotAcceptableResponse()
+- @ApiRequestTimeoutResponse()
+- @ApiConflictResponse()
+- @ApiPreconditionFailedResponse()
+- @ApiTooManyRequestsResponse()
+- @ApiGoneResponse()
+- @ApiPayloadTooLargeResponse()
+- @ApiUnsupportedMediaTypeResponse()
+- @ApiUnprocessableEntityResponse()
+- @ApiInternalServerErrorResponse()
+- @ApiNotImplementedResponse()
+- @ApiBadGatewayResponse()
+- @ApiServiceUnavailableResponse()
+- @ApiGatewayTimeoutResponse()
+- @ApiDefaultResponse()
+
+使用示例：
+
+首先，我们定义了一个名为 GetHomeResponse 的 class 用于声明响应数据类型
+
+```ts
+import { ApiProperty } from '@nestjs/swagger';
+
+export class Menu {
+  @ApiProperty()
+  id: string;
+
+  @ApiProperty()
+  title: string;
+
+  @ApiProperty()
+  icon: string;
+
+  @ApiProperty()
+  link: string;
+}
+
+export class GetHomeResponse {
+  @ApiProperty()
+  menus: Menu[];
+}
+```
+
+然后在 controller 的方法添加 @ApiOkResponse 装饰器，通过 description 属性对响应结构进行描述：
+
+```ts
+@ApiTags('首页')
+@Controller('home')
+export class HomeController {
+  constructor(private readonly homeService: HomeService) {}
+
+  @ApiOperation({ summary: '获取首页瀑布流数据' })
+  @ApiOkResponse({
+    description: '获取首页瀑布流数据',
+    type: GetHomeResponse,
+  })
+  @Get()
+  findAll(@Query('refresh') refresh: 0 | 1) {
+    return this.homeService.findAll(refresh);
+  }
+}
+```
+
+效果如下：
+
+![](2022-12-05-01-59-44.png)
+
+
