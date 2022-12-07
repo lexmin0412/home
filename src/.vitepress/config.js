@@ -90,11 +90,20 @@ export default defineConfig({
 				],
 			},
 			{
+				text: "码砖🧱",
+				items: [
+					{
+						text: "搭建基于vite的react技术栈应用",
+						link: "/construct/搭建基于vite的react技术栈应用",
+					},
+				],
+			},
+			{
 				text: "others",
 				items: [
 					{
-						text: "comming soon",
-						link: "/plan/comming-soon",
+						text: "coming soon",
+						link: "/plan/coming-soon",
 					},
 				],
 			},
