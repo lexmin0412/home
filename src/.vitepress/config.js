@@ -53,8 +53,8 @@ export default defineConfig({
 				text: "前端工程化",
 				items: [
 					{
-						text: "yarn workspace 实践",
-						link: "/前端工程化/yarn-workspace实践",
+						text: "无界微前端实践",
+						link: "/前端工程化/无界微前端实践",
 					},
 				],
 			},
@@ -64,6 +64,10 @@ export default defineConfig({
 					{
 						text: "Corepack 实践",
 						link: "/npm相关/corepack实践",
+					},
+					{
+						text: "yarn workspace 实践",
+						link: "/前端工程化/yarn-workspace实践",
 					},
 				],
 			},
