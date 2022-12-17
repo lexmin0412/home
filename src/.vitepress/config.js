@@ -56,6 +56,10 @@ export default defineConfig({
 						text: "无界微前端实践",
 						link: "/前端工程化/无界微前端实践",
 					},
+					{
+						text: "Lerna管理Monorepo实践",
+						link: "/前端工程化/Lerna管理Monorepo实践",
+					},
 				],
 			},
 			{
