@@ -28,28 +28,28 @@ export default defineConfig({
 				text: "tools",
 				link: "/tools/tools",
 			},
-			// {
-			// 	text: "Find me",
-			// 	items: [
-			// 		{
-			// 			text: "Github",
-			// 			link: "https://github.com/lexmin0412",
-			// 		},
-			// 	],
-			// },
 		],
 		sidebar: {
 			'/blog/': [
 				{
-					text: "前端工程化",
+					text: '微前端',
 					items: [
 						{
 							text: "无界微前端实践",
 							link: "/blog/前端工程化/无界微前端实践",
+						}
+					]
+				},
+				{
+					text: "MonoRepo",
+					items: [
+						{
+							text: "Lerna 管理 Monorepo 实践",
+							link: "/blog/前端工程化/Lerna管理Monorepo实践",
 						},
 						{
-							text: "Lerna管理Monorepo实践",
-							link: "/blog/前端工程化/Lerna管理Monorepo实践",
+							text: "Yarn Workspace 实践",
+							link: "/blog/前端工程化/yarn-workspace实践",
 						},
 					],
 				},
@@ -59,10 +59,6 @@ export default defineConfig({
 						{
 							text: "Corepack 实践",
 							link: "/blog/npm相关/corepack实践",
-						},
-						{
-							text: "yarn workspace 实践",
-							link: "/blog/前端工程化/yarn-workspace实践",
 						},
 					],
 				},
@@ -92,17 +88,17 @@ export default defineConfig({
 					text: "码砖🧱",
 					items: [
 						{
-							text: "搭建基于vite的react技术栈应用",
+							text: "基于 Vite + React 的应用搭建",
 							link: "/blog/construct/搭建基于vite的react技术栈应用",
 						},
 					],
 				},
 				{
-					text: "others",
+					text: "Others",
 					items: [
 						{
 							text: "coming soon",
-							link: "/blog/plan/coming-soon",
+							link: "/blog/plan/Coming-soon",
 						},
 					],
 				},
