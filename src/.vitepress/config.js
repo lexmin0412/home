@@ -70,7 +70,7 @@ export default defineConfig({
 					text: "头脑风暴",
 					items: [
 						{
-							text: "电商需求体系",
+							text: "电商系统功能",
 							link: "/blog/brainstorming/e-commerce-pr-system",
 						},
 					],
